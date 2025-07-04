@@ -5,8 +5,8 @@
   align-items: center;
   height: 50px;
   background-color: #f3f4f6;
-  padding-left: 16px;
-  padding-right: 16px;
+  padding: 0 16px;
+  width: 100%;
   z-index: 1;
 }
 
