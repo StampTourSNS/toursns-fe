@@ -10,7 +10,7 @@ interface RankUserProps {
   name: string;
 }
 
-export default function RankUser({ cnt, imageUrl, name }: RankUserProps) {
+export default function TopRankUser({ cnt, imageUrl, name }: RankUserProps) {
   return (
     <div className={styles.rank_user}>
       <div className={styles.rank_user_image}>
