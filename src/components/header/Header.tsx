@@ -4,6 +4,8 @@ import { useRouter } from 'next/navigation';
 
 import { ChevronLeft, User } from 'lucide-react';
 
+import { ROUTES } from '@/constants/routes';
+
 import styles from './Header.module.css';
 
 //홈(서비스 이름, 로그인), SNS(뒤로가기, 축제이름), 축제 검색페이지(뒤로가기)
@@ -19,7 +21,11 @@ const Header = ({ pageType, festivalName, isLogin = false }: HeaderProps) => {
     router.back();
   };
   const handleLogin = () => {
-    router.push('/login');
+    router.push(ROUTES.LOGIN);
+  };
+
+  const handleMyPage = () => {
+    router.push(ROUTES.MYPAGE);
   };
 
   const renderHeader = () => {
@@ -36,7 +42,12 @@ const Header = ({ pageType, festivalName, isLogin = false }: HeaderProps) => {
                   로그인
                 </button>
               ) : (
-                <User size={24} />
+                <div
+                  className={styles.user_icon_container}
+                  onClick={handleMyPage}
+                >
+                  <User size={24} className={styles.user_icon} />
+                </div>
               )}
             </div>
           </>

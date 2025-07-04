@@ -45,3 +45,17 @@
 .back_button {
   cursor: pointer;
 }
+
+.user_icon_container {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.user_icon {
+  color: #ff6f61;
+}
