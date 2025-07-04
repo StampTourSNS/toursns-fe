@@ -3,6 +3,8 @@ import type { Preview } from '@storybook/react';
 import '../src/app/globals.css';
 import '../src/app/reset.css';
 
+import withAppRouterContext from './withAppRouterContext';
+
 const preview: Preview = {
   parameters: {
     controls: {
@@ -12,6 +14,7 @@ const preview: Preview = {
       },
     },
   },
+  decorators: [withAppRouterContext],
 };
 
 export default preview;
