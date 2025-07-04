@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import { User } from 'lucide-react';
 
-import styles from './RankUser.module.css';
+import styles from './TopRankUser.module.css';
 
 interface RankUserProps {
   cnt: number;

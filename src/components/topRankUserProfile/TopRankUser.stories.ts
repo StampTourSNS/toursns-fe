@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import RankUser from './RankUser';
+import TopRankUser from './TopRankUser';
 
 const meta = {
   title: 'Component/RankUser',
-  component: RankUser,
+  component: TopRankUser,
   parameters: {
     layout: 'fullscreen',
   },
@@ -23,7 +23,7 @@ const meta = {
       description: '사용자 이름',
     },
   },
-} satisfies Meta<typeof RankUser>;
+} satisfies Meta<typeof TopRankUser>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
