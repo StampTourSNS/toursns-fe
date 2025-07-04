@@ -6,7 +6,8 @@ const meta = {
   title: 'Component/RankUser',
   component: RankUser,
   parameters: {
-    layout: 'fullscreen',
+    layout: 'padded',
+    padding: '16px',
   },
   tags: ['autodocs'],
   argTypes: {

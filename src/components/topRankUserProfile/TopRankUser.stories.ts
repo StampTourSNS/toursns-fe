@@ -6,7 +6,8 @@ const meta = {
   title: 'Component/TopRankUser',
   component: TopRankUser,
   parameters: {
-    layout: 'fullscreen',
+    layout: 'padded',
+    padding: '16px',
   },
   tags: ['autodocs'],
   argTypes: {
