@@ -8,12 +8,6 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'picsum.photos',
       },
-      {
-        protocol: 'https',
-        hostname: 'festivals3ss.s3.us-east-1.amazonaws.com',
-        port: '',
-        pathname: '/**',
-      },
     ],
   },
 };
