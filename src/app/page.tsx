@@ -49,15 +49,25 @@ export default function Home() {
   return (
     <>
       <div className={styles.hot_festival_container}>
-        <h1>🔥Hot Festival Top 3🔥</h1>
-        <div className={styles.banner_container}>
-          <Banner hotFestival={HOT_FESTIVAL_DATA.HOT_FESTIVAL} />
-        </div>
+        <h1>🔥 Hot Festival Top 3 🔥</h1>
+        <Banner hotFestival={HOT_FESTIVAL_DATA.HOT_FESTIVAL} />
       </div>
-      <Map
-        isActiveFestival={FESTIVAL_DATA.ACTIVE}
-        soonActiveFestival={FESTIVAL_DATA.SOON}
-      />
+      <div className={styles.map_container}>
+        <div className={styles.festival_container}>
+          <div className={styles.festival_item}>
+            <div className={styles.festival_item_icon_active} />
+            <p className={styles.festival_item_text}> 진행중인 축제</p>
+          </div>
+          <div className={styles.festival_item}>
+            <div className={styles.festival_item_icon_soon} />
+            <p className={styles.festival_item_text}> 예정된 축제</p>
+          </div>
+        </div>
+        <Map
+          isActiveFestival={FESTIVAL_DATA.ACTIVE}
+          soonActiveFestival={FESTIVAL_DATA.SOON}
+        />
+      </div>
     </>
   );
 }
