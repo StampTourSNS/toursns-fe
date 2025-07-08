@@ -1,5 +1,6 @@
 'use client';
 
+import Banner from './_components/banner';
 import Map from './_components/Map';
 import styles from './page.module.css';
 
@@ -15,11 +16,43 @@ const FESTIVAL_DATA = {
   ],
 };
 
+const HOT_FESTIVAL_DATA = {
+  HOT_FESTIVAL: [
+    {
+      id: '1',
+      name: '거제시 거제대학로 축제',
+      image: 'https://picsum.photos/200/300',
+      address: '경상남도 거제시 거제대학로 123',
+      startDate: '2025-01-01',
+      endDate: '2025-01-01',
+    },
+    {
+      id: '2',
+      name: '거창군 거창대학로 축제',
+      image: 'https://picsum.photos/200/300',
+      address: '경상남도 거창군 거창대학로 123',
+      startDate: '2025-01-01',
+      endDate: '2025-01-01',
+    },
+    {
+      id: '3',
+      name: '고성군 고성대학로 축제',
+      image: 'https://picsum.photos/200/300',
+      address: '경상남도 고성군 고성대학로 123',
+      startDate: '2025-01-01',
+      endDate: '2025-01-01',
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <>
-      <div className={styles.banner_container}>
-        <p>배너</p>
+      <div className={styles.hot_festival_container}>
+        <h1>🔥Hot Festival Top 3🔥</h1>
+        <div className={styles.banner_container}>
+          <Banner hotFestival={HOT_FESTIVAL_DATA.HOT_FESTIVAL} />
+        </div>
       </div>
       <Map
         isActiveFestival={FESTIVAL_DATA.ACTIVE}
