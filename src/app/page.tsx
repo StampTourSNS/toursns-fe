@@ -1,5 +1,13 @@
 'use client';
 
+import { useState } from 'react';
+
+import Link from 'next/link';
+
+import { AlignJustify, Search, Trophy } from 'lucide-react';
+
+import { ROUTES } from '@/constants/routes';
+
 import Banner from './_components/Banner';
 import Map from './_components/Map';
 import styles from './page.module.css';
@@ -90,6 +98,7 @@ const HOT_FESTIVAL_DATA = {
 };
 
 export default function Home() {
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
   return (
     <>
       <div className={styles.hot_festival_container}>
@@ -108,6 +117,34 @@ export default function Home() {
           </div>
         </div>
         <Map Festival={FESTIVAL_DATA.FESTIVAL} />
+      </div>
+      <div className={styles.filter_container}>
+        <div
+          className={styles.filter_icon_large}
+          onClick={() => setIsFilterOpen(!isFilterOpen)}
+        >
+          <AlignJustify size={36} color="#ff6f61" />
+        </div>
+        {isFilterOpen && (
+          <>
+            <div
+              className={`${styles.filter_icon_search} ${styles.filter_icon_style}`}
+            >
+              <Link href={ROUTES.SEARCH}>
+                <Search size={28} color="#ff6f61" />
+              </Link>
+              <div className={styles.filter_tooltip}>검색</div>
+            </div>
+            <div
+              className={`${styles.filter_icon_trophy} ${styles.filter_icon_style}`}
+            >
+              <Link href={ROUTES.STAMP}>
+                <Trophy size={28} color="#ff6f61" />
+              </Link>
+              <div className={styles.filter_tooltip}>스탬프 랭킹</div>
+            </div>
+          </>
+        )}
       </div>
     </>
   );

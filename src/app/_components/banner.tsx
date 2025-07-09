@@ -7,6 +7,8 @@ import Link from 'next/link';
 
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
+import { ROUTES } from '@/constants/routes';
+
 import styles from './Banner.module.css';
 
 interface BannerProps {
@@ -60,7 +62,7 @@ export default function Banner({ hotFestival }: BannerProps) {
       {/* 메인 슬라이드 */}
       <div className={styles.slide_container}>
         <Link
-          href={`/festival/${currentFestival.id}`}
+          href={`${ROUTES.FESTIVAL}/${currentFestival.id}`}
           className={styles.festival_link}
         >
           <Image
