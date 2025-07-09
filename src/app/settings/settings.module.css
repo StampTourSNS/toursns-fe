@@ -83,3 +83,11 @@
   background-color: transparent;
   cursor: pointer;
 }
+
+.error_message {
+  color: #ff6f61;
+  align-self: flex-start;
+  font-size: 10px;
+  font-weight: 700;
+  margin-top: 0;
+}
