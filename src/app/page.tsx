@@ -1,25 +1,69 @@
 'use client';
 
-import Banner from './_components/banner';
+import Banner from './_components/Banner';
 import Map from './_components/Map';
 import styles from './page.module.css';
 
 // 축제 데이터 상수 정의
 const FESTIVAL_DATA = {
-  ACTIVE: [
-    { festivalRegion: '0' }, // 거제시
-    { festivalRegion: '1' }, // 거창군
-    { festivalRegion: '2' }, // 고성군
-  ],
-  SOON: [
-    { festivalRegion: '3' }, // 김해시
+  FESTIVAL: [
+    {
+      id: '0',
+      name: '거제시 거제대학로 축제',
+      image: 'https://picsum.photos/200/300',
+      address: '경상남도 거제시 거제대학로 123',
+      startDate: '2025-01-01',
+      endDate: '2025-01-01',
+      festivalRegion: '0',
+      active: 'ACTIVE',
+    },
+    {
+      id: '1',
+      name: '거창군 거창대학로 축제',
+      image: 'https://picsum.photos/200/300',
+      address: '경상남도 거창군 거창대학로 123',
+      startDate: '2025-01-01',
+      endDate: '2025-01-01',
+      festivalRegion: '1',
+      active: 'ACTIVE',
+    },
+    {
+      id: '2',
+      name: '고성군 고성대학로 축제',
+      image: 'https://picsum.photos/200/300',
+      address: '경상남도 고성군 고성대학로 123',
+      startDate: '2025-01-01',
+      endDate: '2025-01-01',
+      festivalRegion: '2',
+      active: 'ACTIVE',
+    },
+    {
+      id: '3',
+      name: '김해시 김해대학로 축제',
+      image: 'https://picsum.photos/200/300',
+      address: '경상남도 김해시 김해대학로 123',
+      startDate: '2025-01-01',
+      endDate: '2025-01-01',
+      festivalRegion: '3',
+      active: 'SOON',
+    },
+    {
+      id: '4',
+      name: '거제시 축제',
+      image: 'https://picsum.photos/200/300',
+      address: '경상남도 거제시 거제대학로 12345',
+      startDate: '2025-01-01',
+      endDate: '2025-01-01',
+      festivalRegion: '0',
+      active: 'ACTIVE',
+    },
   ],
 };
 
 const HOT_FESTIVAL_DATA = {
   HOT_FESTIVAL: [
     {
-      id: '1',
+      id: '0',
       name: '거제시 거제대학로 축제',
       image: 'https://picsum.photos/200/300',
       address: '경상남도 거제시 거제대학로 123',
@@ -27,7 +71,7 @@ const HOT_FESTIVAL_DATA = {
       endDate: '2025-01-01',
     },
     {
-      id: '2',
+      id: '1',
       name: '거창군 거창대학로 축제',
       image: 'https://picsum.photos/200/300',
       address: '경상남도 거창군 거창대학로 123',
@@ -35,7 +79,7 @@ const HOT_FESTIVAL_DATA = {
       endDate: '2025-01-01',
     },
     {
-      id: '3',
+      id: '2',
       name: '고성군 고성대학로 축제',
       image: 'https://picsum.photos/200/300',
       address: '경상남도 고성군 고성대학로 123',
@@ -63,10 +107,7 @@ export default function Home() {
             <p className={styles.festival_item_text}> 예정된 축제</p>
           </div>
         </div>
-        <Map
-          isActiveFestival={FESTIVAL_DATA.ACTIVE}
-          soonActiveFestival={FESTIVAL_DATA.SOON}
-        />
+        <Map Festival={FESTIVAL_DATA.FESTIVAL} />
       </div>
     </>
   );

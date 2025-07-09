@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
-import styles from './banner.module.css';
+import styles from './Banner.module.css';
 
 interface BannerProps {
   hotFestival: {
