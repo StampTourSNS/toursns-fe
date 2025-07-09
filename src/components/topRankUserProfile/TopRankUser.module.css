@@ -13,7 +13,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border: 1px solid #ff6f61;
+  border: 2px solid #ff6f61;
 }
 
 .rank_user_name {
