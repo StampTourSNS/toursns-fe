@@ -1,0 +1,15 @@
+export const ROUTES = {
+  HOME: '/',
+  MYPAGE: '/mypage',
+  LOGIN: '/login',
+  REGISTER: '/register',
+  LOGOUT: '/logout',
+  SETTINGS: '/settings',
+  PROFILE: '/profile',
+  POST: '/post',
+  POST_DETAIL: '/post/:id',
+  POST_EDIT: '/post/:id/edit',
+  FEED: '/feed',
+  STAMP: '/stamp',
+  LIVE: '/live',
+};
