@@ -13,5 +13,5 @@ export const ROUTES = {
   STAMP: '/stamp',
   LIVE: '/live',
   SEARCH: '/search',
-  FESTIVAL: '/festival/:id',
+  FESTIVAL: '/festival',
 };
