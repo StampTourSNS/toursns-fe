@@ -2,6 +2,8 @@ import Link from 'next/link';
 
 import { X } from 'lucide-react';
 
+import { ROUTES } from '@/constants/routes';
+
 import styles from './FestivalModal.module.css';
 
 interface Festival {
@@ -62,7 +64,7 @@ export default function FestivalModal({
           ) : (
             selectedFestival.map((festival) => (
               <Link
-                href={`/festival/${festival.id}`}
+                href={`${ROUTES.FESTIVAL}/${festival.id}`}
                 key={festival.id}
                 className={`${styles.festival_item} ${styles.status} ${styles[festival.active.toLowerCase()]}`}
               >
