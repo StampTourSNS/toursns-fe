@@ -3,13 +3,14 @@ import TopRankUser from '@/components/topRankUserProfile/TopRankUser';
 
 import styles from './page.module.css';
 import rankList from './rankList.json';
-import topList from './topList.json';
-
-const TOP_RANK_COUNT = 3; // Top 3 랭킹 개수
 
 export default function StampRank() {
-  const sortedTopList = [...topList.items].sort((a, b) => b.cnt - a.cnt);
   const sortedRankList = [...rankList.items].sort((a, b) => b.cnt - a.cnt);
+
+  // 상위 3명을 안전하게 접근
+  const firstPlace = sortedRankList[0];
+  const secondPlace = sortedRankList[1];
+  const thirdPlace = sortedRankList[2];
 
   return (
     <div className={styles.stamp_rank_container}>
@@ -19,11 +20,15 @@ export default function StampRank() {
             {/* 2위 */}
             <div className={styles.gray_block}></div>
             <div className={styles.top_rank_profile} style={{ bottom: '80px' }}>
-              <TopRankUser
-                imageUrl={sortedTopList[1].imageUrl}
-                name={sortedTopList[1].name}
-                cnt={sortedTopList[1].cnt}
-              />
+              {secondPlace ? (
+                <TopRankUser
+                  imageUrl={secondPlace.imageUrl}
+                  name={secondPlace.name}
+                  cnt={secondPlace.cnt}
+                />
+              ) : (
+                <div className={styles.empty_rank}>-</div>
+              )}
             </div>
             <div>2</div>
           </div>
@@ -34,11 +39,15 @@ export default function StampRank() {
               className={styles.top_rank_profile}
               style={{ bottom: '110px' }}
             >
-              <TopRankUser
-                imageUrl={sortedTopList[0].imageUrl}
-                name={sortedTopList[0].name}
-                cnt={sortedTopList[0].cnt}
-              />
+              {firstPlace ? (
+                <TopRankUser
+                  imageUrl={firstPlace.imageUrl}
+                  name={firstPlace.name}
+                  cnt={firstPlace.cnt}
+                />
+              ) : (
+                <div className={styles.empty_rank}>-</div>
+              )}
             </div>
             <div>1</div>
           </div>
@@ -46,27 +55,34 @@ export default function StampRank() {
             {/* 3위 */}
             <div className={styles.gray_block}></div>
             <div className={styles.top_rank_profile} style={{ bottom: '70px' }}>
-              <TopRankUser
-                imageUrl={sortedTopList[2].imageUrl}
-                name={sortedTopList[2].name}
-                cnt={sortedTopList[2].cnt}
-              />
+              {thirdPlace ? (
+                <TopRankUser
+                  imageUrl={thirdPlace.imageUrl}
+                  name={thirdPlace.name}
+                  cnt={thirdPlace.cnt}
+                />
+              ) : (
+                <div className={styles.empty_rank}>-</div>
+              )}
             </div>
             <div>3</div>
           </div>
         </div>
       </div>
       <div className={styles.rank_user_container}>
-        {sortedRankList.map((item, index) => (
-          <div className={styles.rank_user_item} key={item.id}>
-            <RankUser
-              imageUrl={item.imageUrl}
-              name={item.name}
-              cnt={item.cnt}
-              rank={index + TOP_RANK_COUNT + 1}
-            />
-          </div>
-        ))}
+        {sortedRankList.map(
+          (item, index) =>
+            index >= 3 && (
+              <div className={styles.rank_user_item} key={item.id}>
+                <RankUser
+                  imageUrl={item.imageUrl}
+                  name={item.name}
+                  cnt={item.cnt}
+                  rank={index + 1}
+                />
+              </div>
+            ),
+        )}
       </div>
     </div>
   );
