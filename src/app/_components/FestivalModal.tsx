@@ -64,7 +64,7 @@ export default function FestivalModal({
           ) : (
             selectedFestival.map((festival) => (
               <Link
-                href={`${ROUTES.FESTIVAL}/${festival.id}`}
+                href={ROUTES.FESTIVAL_DETAIL(festival.id)}
                 key={festival.id}
                 className={`${styles.festival_item} ${styles.status} ${styles[festival.active.toLowerCase()]}`}
               >
