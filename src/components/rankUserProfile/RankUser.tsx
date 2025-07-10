@@ -8,12 +8,14 @@ interface RankUserProps {
   imageUrl: string;
   name: string;
   cnt: number;
+  rank: number;
 }
 
-export default function RankUser({ imageUrl, name, cnt }: RankUserProps) {
+export default function RankUser({ imageUrl, name, cnt, rank }: RankUserProps) {
   return (
     <div className={styles.rank_user_container}>
       <div className={styles.rank_user_info_container}>
+        <p className={styles.rank_number}>{rank}</p>
         <div className={styles.rank_user_image}>
           {imageUrl ? (
             <Image

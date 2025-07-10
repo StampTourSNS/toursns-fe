@@ -11,6 +11,7 @@ export const ROUTES = {
   POST_EDIT: '/post/:id/edit',
   FEED: '/feed',
   STAMP: '/stamp',
+  STAMP_RANK: '/stamp-rank',
   LIVE: '/live',
   SEARCH: '/search',
   FESTIVAL: '/festival',
