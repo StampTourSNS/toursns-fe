@@ -3,7 +3,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import StatusChip, { StatusType } from './StatusChip';
 
 const meta: Meta<typeof StatusChip> = {
-  title: 'Common/StatusChip',
+  title: 'Component/StatusChip',
   component: StatusChip,
 };
 
