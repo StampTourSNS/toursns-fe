@@ -1,0 +1,158 @@
+.modal_container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal_content {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px 24px 24px 24px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal_header h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.modal_header button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #666;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.modal_header button:hover {
+  color: #000;
+  background-color: #f5f5f5;
+}
+
+.image_container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.image_wrapper {
+  cursor: pointer;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #ff6f61;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.image_wrapper:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 111, 97, 0.3);
+}
+
+.user_image {
+  width: 100%;
+  height: 100%;
+  color: #ff6f61;
+}
+
+.preview_image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.camera_overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.image_wrapper:hover .camera_overlay {
+  opacity: 1;
+}
+
+.camera_icon {
+  width: 16px;
+  height: 16px;
+  color: white;
+}
+
+.hidden_input {
+  display: none;
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.nickname_input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0 12px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  transition: border-color 0.2s ease;
+}
+
+.nickname_input:focus {
+  outline: none;
+  border-color: #ff6f61;
+}
+
+.nickname_input::placeholder {
+  color: #999;
+}
+
+.confirm_button {
+  width: 100%;
+  height: 40px;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.confirm_button:hover {
+  background-color: #e55a4f;
+}
+
+.confirm_button:active {
+  transform: translateY(1px);
+}
