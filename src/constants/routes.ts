@@ -12,6 +12,4 @@ export const ROUTES = {
   FEED: '/feed',
   STAMP: '/stamp',
   LIVE: '/live',
-  SEARCH: '/search',
-  FESTIVAL: '/festival',
 };
