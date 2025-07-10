@@ -15,16 +15,6 @@ interface CommentUserProps {
   isUser: boolean;
 }
 
-interface MenuPosition {
-  top: number;
-  right: number;
-}
-
-const MENU_OFFSET = {
-  TOP: 2,
-  RIGHT: 10,
-};
-
 export default function CommentUser({
   imageUrl,
   name,
@@ -32,26 +22,10 @@ export default function CommentUser({
   isUser,
 }: CommentUserProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [menuPosition, setMenuPosition] = useState<MenuPosition>({
-    top: 0,
-    right: 0,
-  });
   const containerRef = useRef<HTMLDivElement>(null);
-  const ellipsisRef = useRef<HTMLDivElement>(null);
-
-  const calculateMenuPosition = (): MenuPosition => {
-    if (!ellipsisRef.current) return { top: 0, right: 0 };
-
-    const rect = ellipsisRef.current.getBoundingClientRect();
-    return {
-      top: rect.bottom + MENU_OFFSET.TOP,
-      right: window.innerWidth - rect.right - MENU_OFFSET.RIGHT,
-    };
-  };
 
   const handleEllipsisClick = (e: React.MouseEvent) => {
     e.stopPropagation();
-    setMenuPosition(calculateMenuPosition());
     setIsOpen(!isOpen);
   };
 
@@ -76,7 +50,7 @@ export default function CommentUser({
 
   const renderUserImage = () => (
     <div className={styles.comment_user_image}>
-      {imageUrl ? (
+      {imageUrl && imageUrl !== 'null' ? (
         <Image src={imageUrl} alt={`${name} 프로필`} width={42} height={42} />
       ) : (
         <User size={42} color="#FF6F61" />
@@ -85,7 +59,7 @@ export default function CommentUser({
   );
 
   const renderMenu = () => (
-    <div className={styles.comment_user_menu_container} style={menuPosition}>
+    <div className={styles.comment_user_menu_container}>
       <div className={styles.comment_user_menu_item}>
         <p
           onClick={() => {
@@ -122,7 +96,7 @@ export default function CommentUser({
       </div>
 
       {isUser && (
-        <div ref={ellipsisRef}>
+        <div>
           <Ellipsis
             size={24}
             color="#000"
