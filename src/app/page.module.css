@@ -54,10 +54,15 @@
   cursor: pointer;
   border: 2px solid #ff6f61;
   border-radius: 50%;
-  padding: 6px;
+  padding: 8px;
   background: white;
   transition: all 0.3s ease;
   position: relative;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .filter_icon_large:hover {
@@ -73,12 +78,17 @@
 .filter_icon_style {
   border: 2px solid #ff6f61;
   border-radius: 50%;
-  padding: 4px;
+  padding: 6px;
   background: white;
   cursor: pointer;
   transition: all 0.3s ease;
   opacity: 0;
   animation: slideIn 0.3s ease forwards;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .filter_icon_style:hover {

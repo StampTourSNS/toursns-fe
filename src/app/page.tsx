@@ -138,7 +138,7 @@ export default function Home() {
             <div
               className={`${styles.filter_icon_trophy} ${styles.filter_icon_style}`}
             >
-              <Link href={ROUTES.STAMP}>
+              <Link href={ROUTES.STAMP_RANK}>
                 <Trophy size={28} color="#ff6f61" />
               </Link>
               <div className={styles.filter_tooltip}>스탬프 랭킹</div>
