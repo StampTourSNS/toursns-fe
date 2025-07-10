@@ -7,11 +7,6 @@ import rankList from './rankList.json';
 export default function StampRank() {
   const sortedRankList = [...rankList.items].sort((a, b) => b.cnt - a.cnt);
 
-  // 상위 3명을 안전하게 접근
-  const firstPlace = sortedRankList[0];
-  const secondPlace = sortedRankList[1];
-  const thirdPlace = sortedRankList[2];
-
   return (
     <div className={styles.stamp_rank_container}>
       <div className={styles.top_rank_user_container}>
@@ -20,11 +15,11 @@ export default function StampRank() {
             {/* 2위 */}
             <div className={styles.gray_block}></div>
             <div className={styles.top_rank_profile} style={{ bottom: '80px' }}>
-              {secondPlace ? (
+              {sortedRankList[1] ? (
                 <TopRankUser
-                  imageUrl={secondPlace.imageUrl}
-                  name={secondPlace.name}
-                  cnt={secondPlace.cnt}
+                  imageUrl={sortedRankList[1].imageUrl}
+                  name={sortedRankList[1].name}
+                  cnt={sortedRankList[1].cnt}
                 />
               ) : (
                 <div className={styles.empty_rank}>-</div>
@@ -39,11 +34,11 @@ export default function StampRank() {
               className={styles.top_rank_profile}
               style={{ bottom: '110px' }}
             >
-              {firstPlace ? (
+              {sortedRankList[0] ? (
                 <TopRankUser
-                  imageUrl={firstPlace.imageUrl}
-                  name={firstPlace.name}
-                  cnt={firstPlace.cnt}
+                  imageUrl={sortedRankList[0].imageUrl}
+                  name={sortedRankList[0].name}
+                  cnt={sortedRankList[0].cnt}
                 />
               ) : (
                 <div className={styles.empty_rank}>-</div>
@@ -55,11 +50,11 @@ export default function StampRank() {
             {/* 3위 */}
             <div className={styles.gray_block}></div>
             <div className={styles.top_rank_profile} style={{ bottom: '70px' }}>
-              {thirdPlace ? (
+              {sortedRankList[2] ? (
                 <TopRankUser
-                  imageUrl={thirdPlace.imageUrl}
-                  name={thirdPlace.name}
-                  cnt={thirdPlace.cnt}
+                  imageUrl={sortedRankList[2].imageUrl}
+                  name={sortedRankList[2].name}
+                  cnt={sortedRankList[2].cnt}
                 />
               ) : (
                 <div className={styles.empty_rank}>-</div>
