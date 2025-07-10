@@ -4,8 +4,8 @@ import { useState } from 'react';
 
 import { Pencil, User } from 'lucide-react';
 
-import Card from './components/Card';
-import Modal from './components/modal';
+import Card from './_components/Card';
+import Modal from './_components/modal';
 import mockData from './mockData.json';
 import styles from './mypage.module.css';
 
