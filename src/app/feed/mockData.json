@@ -1,0 +1,75 @@
+{
+  "feed": [
+    {
+      "id": 1,
+      "image": "/images/festival.png",
+      "content": "여기 밤하늘도 너무 이뻐요~ 다들 저녁까지 즐기고 가도 좋을거 같습니다ㅎㅎ여기 밤하늘도 너무 이뻐요~ 다들 저녁까지 즐기고 가도 좋을거 같습니다ㅎㅎ여기 밤하늘도 너무 이뻐요~ 다들 저녁까지 즐기고 가도 좋을거 같습니다ㅎㅎㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴ",
+      "user": {
+        "id": 1,
+        "name": "A 유저",
+        "createdAt": "2025-01-01",
+        "description": "설명",
+        "image": "/images/festival.png"
+      },
+      "comments": [
+        {
+          "id": 1,
+          "user": {
+            "id": 1,
+            "name": "A 유저",
+            "createdAt": "2025-01-01",
+            "description": "설명",
+            "image": "/images/festival.png"
+          },
+          "content": "댓글 내용",
+          "createdAt": "2025-01-01"
+        },
+        {
+          "id": 2,
+          "user": {
+            "id": 2,
+            "name": "B 유저",
+            "createdAt": "2025-01-01",
+            "description": "설명",
+            "image": "/images/festival.png"
+          },
+          "content": "댓글 내용",
+          "createdAt": "2025-01-01"
+        }
+      ],
+      "favorites": [
+        {
+          "id": 2,
+          "name": "B 유저",
+          "createdAt": "2025-01-01"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "image": "/images/festival.png",
+      "content": "여기 밤하늘도 너무 이뻐요~ 다들 저녁까지 즐기고 가도 좋을거 같습니다ㅎㅎ",
+      "user": {
+        "id": 2,
+        "name": "B 유저",
+        "createdAt": "2025-01-01",
+        "description": "설명",
+        "image": "/images/festival.png"
+      },
+      "comments": [
+        {
+          "id": 1,
+          "content": "댓글 내용",
+          "createdAt": "2025-01-01"
+        }
+      ],
+      "favorites": [
+        {
+          "id": 1,
+          "name": "A 유저",
+          "createdAt": "2025-01-01"
+        }
+      ]
+    }
+  ]
+}
