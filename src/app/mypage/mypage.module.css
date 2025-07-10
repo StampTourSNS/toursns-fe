@@ -99,6 +99,9 @@
   justify-content: space-between;
   width: 100%;
   height: 100%;
+  padding: 12px 0px;
+  background-color: #e5e7eb;
+  border-radius: 8px;
 }
 
 .myPage_info_item {
@@ -109,8 +112,20 @@
   gap: 12px;
   width: 100%;
   height: 40px;
-  background-color: #d9d9d9;
+
   padding: 12px;
+}
+.myPage_info_item_center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 12px;
+  width: 100%;
+  height: 40px;
+  padding: 12px;
+  border-left: 1px solid #b0b3b6;
+  border-right: 1px solid #b0b3b6;
 }
 
 .myPage_info_item_number {
@@ -121,6 +136,7 @@
 
 .myPage_info_item_title {
   white-space: nowrap;
+  font-size: 20px;
 }
 .mypage_post_container {
   display: flex;
@@ -169,5 +185,11 @@
   }
   .myPage_info_item:not(:last-child)::after {
     display: none;
+  }
+  .user_info_container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
   }
 }

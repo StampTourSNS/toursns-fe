@@ -38,7 +38,7 @@ export default function MyPage() {
           <div className={styles.user_info_container}>
             <div className={styles.user_info_item}>
               <p className={styles.user_info_item_number}>10</p>
-              <p>게시글 수</p>
+              <p>게시글</p>
             </div>
             <div className={styles.user_info_item}>
               <p className={styles.user_info_item_number}>10</p>
@@ -56,7 +56,7 @@ export default function MyPage() {
           <p className={styles.myPage_info_item_title}>스탬프</p>
           <p className={styles.myPage_info_item_number}>100</p>
         </div>
-        <div className={styles.myPage_info_item}>
+        <div className={styles.myPage_info_item_center}>
           <p className={styles.myPage_info_item_title}>코인</p>
           <p className={styles.myPage_info_item_number}>100</p>
         </div>
