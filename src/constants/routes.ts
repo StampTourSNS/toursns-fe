@@ -15,4 +15,5 @@ export const ROUTES = {
   LIVE: '/live',
   SEARCH: '/search',
   FESTIVAL: '/festival',
+  WALLET: '/stamp-wallet',
 };

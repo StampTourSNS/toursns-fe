@@ -1,0 +1,47 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.imageBox {
+  position: relative;
+  width: 220px;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.chip {
+  position: absolute;
+  top: 35px;
+  right: 20px;
+}
+
+.name {
+
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  margin-left: 25px;
+}
+
+.imageBox:hover .image {
+  transform: scale(1.05); 
+}
