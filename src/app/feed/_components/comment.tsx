@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 
-import { X } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 import CommentUser from '@/components/commentUser/CommentUser';
 
@@ -18,7 +18,28 @@ interface CommentProps {
 
 export default function Comment({ show, onClose, feed }: CommentProps) {
   const [openDropdownId, setOpenDropdownId] = useState<number | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (show) {
+      // 약간의 지연을 두어 DOM이 업데이트된 후 애니메이션 시작
+      requestAnimationFrame(() => {
+        setIsVisible(true);
+      });
+    } else {
+      setIsVisible(false);
+    }
+  }, [show]);
+
+  // 닫기 버튼 클릭 핸들러
+  const handleClose = () => {
+    setIsVisible(false);
+    // 애니메이션 완료 후 부모에게 닫기 신호 전송
+    setTimeout(() => {
+      onClose();
+    }, 300); // transition 시간과 동일
+  };
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -38,9 +59,12 @@ export default function Comment({ show, onClose, feed }: CommentProps) {
   }, [openDropdownId]);
 
   return (
-    <div className={`${styles.comment_container} ${show ? styles.show : ''}`}>
-      <button className={styles.close_btn} onClick={onClose}>
-        <X />
+    <div
+      className={`${styles.comment_container} ${isVisible ? styles.show : ''}`}
+      ref={dropdownRef}
+    >
+      <button className={styles.close_btn} onClick={handleClose}>
+        <ChevronDown />
       </button>
       {feed.comments.map((comment) => (
         <CommentUser
