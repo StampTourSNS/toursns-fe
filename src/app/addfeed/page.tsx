@@ -34,7 +34,7 @@ const AddFeed = () => {
 
   return (
     <div className={styles.add_feed_container}>
-      <div className={styles.left_box}>
+      <form className={styles.left_box}>
         <div
           className={styles.image_upload_box}
           onClick={() => fileInputRef.current?.click()}
@@ -59,6 +59,7 @@ const AddFeed = () => {
             ref={fileInputRef}
             style={{ display: 'none' }}
             onChange={handleImageChange}
+            name="image"
           />
         </div>
         {!showTextInput && (
@@ -73,13 +74,18 @@ const AddFeed = () => {
               value={text}
               onChange={(e) => setText(e.target.value)}
               placeholder="내용을 입력하세요"
+              name="text"
             />
-            <button className={styles.send_btn} onClick={handleSendClick}>
+            <button
+              className={styles.send_btn}
+              onClick={handleSendClick}
+              type="submit"
+            >
               <Send size={28} />
             </button>
           </>
         )}
-      </div>
+      </form>
     </div>
   );
 };
