@@ -20,7 +20,7 @@
 .image_upload_box {
   height: 300px;
   width: 425px;
-  border: 2px solid #ff6b6b;
+  border: 2px solid #ff6f61;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
@@ -34,12 +34,12 @@
 }
 
 .image_upload_box:hover {
-  border: 2px solid #ff3b3b;
+  border: 2px solid #ff6f61;
 }
 
 .plus_icon {
   font-size: 2.5rem;
-  color: #ff6b6b;
+  color: #ff6f61;
 }
 
 .preview_img {
@@ -70,7 +70,7 @@
   max-height: 48px;
   border: none;
   border-radius: 50%;
-  background: #ff6b6b;
+  background: #ff6f61;
   color: #fff;
   font-size: 2rem;
   cursor: pointer;
@@ -82,7 +82,7 @@
 
 .next_btn:hover,
 .send_btn:hover {
-  background: #ff3b3b;
+  background: #ff6f61;
 }
 
 @media (max-width: 445px) {
