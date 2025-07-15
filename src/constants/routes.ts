@@ -1,6 +1,6 @@
 export const ROUTES = {
   HOME: '/',
-  MYPAGE: '/mypage',
+  MYPAGE: (id: string) => `/mypage/${id}`,
   LOGIN: '/login',
   REGISTER: '/register',
   LOGOUT: '/logout',
@@ -12,4 +12,6 @@ export const ROUTES = {
   FEED: '/feed',
   STAMP: '/stamp',
   LIVE: '/live',
+  MARKET: '/market',
+  ITEM: '/item',
 };
