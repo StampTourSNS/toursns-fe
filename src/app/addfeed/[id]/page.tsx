@@ -3,6 +3,7 @@
 import React, { useRef, useState } from 'react';
 
 import Image from 'next/image';
+import { useParams } from 'next/navigation';
 
 import { ChevronRight, Send } from 'lucide-react';
 
@@ -13,7 +14,8 @@ const AddFeed = () => {
   const [text, setText] = useState('');
   const [showTextInput, setShowTextInput] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
-
+  const { id } = useParams();
+  console.log(id);
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
