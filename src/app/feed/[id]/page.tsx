@@ -40,7 +40,7 @@ export default function Feed() {
       <Link href={`/addfeed/${id}`}>
         <CirclePlus className={styles.add_feed_button} />
       </Link>
-      <Nav isActive={true} />
+      <Nav isActive={true} id={id as string} />
     </div>
   );
 }

@@ -3,12 +3,14 @@
 import { useEffect, useRef, useState } from 'react';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 import { Ellipsis, User } from 'lucide-react';
 
 import styles from './CommentUser.module.css';
 
 interface CommentUserProps {
+  userId: number;
   imageUrl: string | null;
   name: string;
   comment: string;
@@ -16,6 +18,7 @@ interface CommentUserProps {
 }
 
 export default function CommentUser({
+  userId,
   imageUrl,
   name,
   comment,
@@ -84,11 +87,13 @@ export default function CommentUser({
   return (
     <div className={styles.comment_user_container} ref={containerRef}>
       <div className={styles.comment_user_info_container}>
-        {renderUserImage()}
+        <Link href={`/mypage/${userId}`}>{renderUserImage()}</Link>
         <div className={styles.comment_user_info}>
-          <div className={styles.comment_user_name}>
-            <p>{name}</p>
-          </div>
+          <Link href={`/mypage/${userId}`}>
+            <div className={styles.comment_user_name}>
+              <p>{name}</p>
+            </div>
+          </Link>
           <div className={styles.comment_user_comment}>
             <p>{comment}</p>
           </div>

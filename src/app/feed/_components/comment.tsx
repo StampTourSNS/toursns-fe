@@ -69,6 +69,7 @@ export default function Comment({ show, onClose, feed }: CommentProps) {
       {feed.comments.map((comment) => (
         <CommentUser
           key={comment.id}
+          userId={comment.user?.id}
           imageUrl={comment.user?.image}
           name={comment.user?.name}
           comment={comment.content}
