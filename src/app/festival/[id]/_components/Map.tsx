@@ -64,7 +64,6 @@ declare global {
     kakao: {
       maps: KakaoMaps;
     };
-    closeOverlay?: () => void;
   }
 }
 
@@ -107,12 +106,6 @@ export default function Map({
             <div class="${styles.info}">
               <div class="${styles.title}">
                 ${name}
-                <div class="${styles.close}" onclick="closeOverlay()" title="닫기">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M18 6 6 18"/>
-                    <path d="m6 6 12 12"/>
-                  </svg>
-                </div>
               </div>
               <div class="${styles.mapBody}">
                 <div class="${styles.desc}">
