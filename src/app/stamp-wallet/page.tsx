@@ -2,6 +2,8 @@
 
 import React, { useEffect, useState } from 'react';
 
+import Image from 'next/image';
+
 import CountChip from '@/app/stamp-wallet/_components/countChip';
 
 import StampSummary from './_components/stampSummary';
@@ -58,7 +60,7 @@ export default function StampWalletPage() {
           return (
             <div key={regionId} className={styles.item}>
               <div className={styles.imageBox}>
-                <img
+                <Image
                   src={`/images/stamp/${regionId}.png`}
                   alt={region.name}
                   className={styles.image}
