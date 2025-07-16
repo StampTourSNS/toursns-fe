@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  height: 100%;
 }
 
 .festivalInfo {
@@ -17,67 +18,91 @@
   flex-grow: 1;
 }
 
-.festivalInfoHeader {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
-}
-
-.weather {
-  background-color: rgba(175, 221, 252, 0.5);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4px 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-.festivalName {
-  font-size: 24px;
-  font-weight: bold;
-  color: #3f3f3f;
-}
-
-.festivalDate {
-  font-size: 16px;
-  color: #666;
-}
-
-.festivalAddressContainer {
-  display: flex;
-  flex-direction: row;
-  gap: 14px;
-  align-items: center;
-  cursor: pointer;
-}
-
-.festivalAddress {
-  font-size: 16px;
-  color: #666;
-}
-
-.festivalNumber {
-  font-size: 16px;
-  color: #666;
-}
-
-.snsButton {
-  height: 100%;
-  background-color: #ffffff;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2px solid #ff6f61;
-  cursor: pointer;
-  font-size: 20px;
-}
-
 .copyText {
   font-size: 16px;
   color: #666;
   background-color: #d0d0d0;
   position: fixed;
   bottom: 0;
+}
+
+.map {
+  border-radius: 8px;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recommendFood {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  min-height: 150px;
+}
+
+.recommendTour {
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  min-height: 150px;
+}
+
+.recommendFood h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3f3f3f;
+}
+
+.recommendTour h3 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #3f3f3f;
+}
+
+/* 반응형 디자인 - 524px 이하 */
+@media (max-width: 524px) {
+  .container {
+    gap: 20px;
+  }
+
+  .festivalInfo {
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .festivalImage {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .weather {
+    min-width: 100px;
+    padding: 6px 10px;
+    font-weight: 600;
+  }
+
+  .weatherInfo {
+    gap: 6px;
+  }
+
+  .snsButton {
+    font-size: 18px;
+    padding: 12px 16px;
+    height: auto;
+  }
+
+  .map {
+    padding: 16px;
+    min-height: 250px;
+  }
+
+  .recommendFood,
+  .recommendTour {
+    padding: 16px;
+    min-height: 220px;
+  }
 }

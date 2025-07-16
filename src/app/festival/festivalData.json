@@ -9,12 +9,12 @@
       "endDate": "2025-01-01",
       "festivalRegion": "0",
       "active": "Ongoing",
-      "nx": 127.06069,
-      "ny": 34.84328,
+      "nx": 34.893055,
+      "ny": 128.608942,
       "festivalNumber": "1234567890"
     },
     {
-      "id": "1",
+      "id": 1,
       "name": "거창군 거창대학로 축제",
       "image": "https://picsum.photos/200/300",
       "address": "경상남도 거창군 거창대학로 123",
@@ -22,12 +22,12 @@
       "endDate": "2025-01-01",
       "festivalRegion": "1",
       "active": "Ongoing",
-      "nx": 127.06069,
-      "ny": 34.84328,
+      "nx": 35.690743,
+      "ny": 127.914694,
       "festivalNumber": "1234567890"
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "고성군 고성대학로 축제",
       "image": "https://picsum.photos/200/300",
       "address": "경상남도 고성군 고성대학로 123",
@@ -35,12 +35,12 @@
       "endDate": "2025-01-01",
       "festivalRegion": "2",
       "active": "Ongoing",
-      "nx": 127.06069,
-      "ny": 34.84328,
+      "nx": 38.3801292,
+      "ny": 128.4674385,
       "festivalNumber": "1234567890"
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "김해시 김해대학로 축제",
       "image": "https://picsum.photos/200/300",
       "address": "경상남도 김해시 김해대학로 123",
@@ -48,12 +48,12 @@
       "endDate": "2025-01-01",
       "festivalRegion": "3",
       "active": "Scheduled",
-      "nx": 127.06069,
-      "ny": 34.84328,
+      "nx": 35.2285451,
+      "ny": 128.8893517,
       "festivalNumber": "1234567890"
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "거제시 축제",
       "image": "https://picsum.photos/200/300",
       "address": "경상남도 거제시 거제대학로 12345",
@@ -61,8 +61,8 @@
       "endDate": "2025-01-01",
       "festivalRegion": "0",
       "active": "Ongoing",
-      "nx": 127.06069,
-      "ny": 34.84328,
+      "nx": 34.893055,
+      "ny": 128.608942,
       "festivalNumber": "1234567890"
     }
   ]
