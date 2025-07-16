@@ -39,7 +39,7 @@ body {
 }
 
 main {
-  padding: 0 16px;
+  padding: 0 16px 32px 16px;
   height: 100%;
 }
 

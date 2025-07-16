@@ -9,6 +9,7 @@ import FestivalHeader from './_components/FestivalHeader';
 import FestivalInfo from './_components/FestivalInfo';
 import Food from './_components/Food';
 import Map from './_components/Map';
+import Tour from './_components/Tour';
 import styles from './page.module.css';
 
 export default function FestivalDetail() {
@@ -62,7 +63,7 @@ export default function FestivalDetail() {
       </div>
       <div className={styles.recommendTour}>
         <h3>추천 관광지</h3>
-        <div>리스트</div>
+        <Tour tourList={festival?.recommendTour} />
       </div>
     </div>
   );
