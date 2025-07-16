@@ -2,39 +2,39 @@
   "items": [
     {
       "id": 1,
-      "image": "/public/images/festival.png"
+      "image": "/images/festival.png"
     },
     {
       "id": 2,
-      "image": "/public/images/festival.png"
+      "image": "/images/festival.png"
     },
     {
       "id": 3,
-      "image": "/public/images/festival.png"
+      "image": "/images/festival.png"
     },
     {
       "id": 4,
-      "image": "/public/images/festival.png"
+      "image": "/images/festival.png"
     },
     {
       "id": 5,
-      "image": "/public/images/festival.png"
+      "image": "/images/festival.png"
     },
     {
       "id": 6,
-      "image": "/public/images/festival.png"
+      "image": "/images/festival.png"
     },
     {
       "id": 7,
-      "image": "/public/images/festival.png"
+      "image": "/images/festival.png"
     },
     {
       "id": 8,
-      "image": "/public/images/festival.png"
+      "image": "/images/festival.png"
     },
     {
       "id": 9,
-      "image": "/public/images/festival.png"
+      "image": "/images/festival.png"
     }
   ]
 }

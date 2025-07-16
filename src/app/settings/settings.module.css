@@ -83,6 +83,10 @@
   background-color: transparent;
   cursor: pointer;
 }
+.submit_button:hover {
+  background-color: #ff6f61;
+  color: #ffffff;
+}
 
 .error_message {
   color: #ff6f61;

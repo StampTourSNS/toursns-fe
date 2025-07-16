@@ -19,6 +19,7 @@ export default function Modal({
 }) {
   const [previewImage, setPreviewImage] = useState<string | null>(null);
   const [nickname, setNickname] = useState('');
+  const [nicknameError, setNicknameError] = useState('');
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -27,9 +28,43 @@ export default function Modal({
     if (!isOpen) {
       setPreviewImage(null);
       setNickname('');
+      setNicknameError('');
       setSelectedFile(null);
     }
   }, [isOpen]);
+
+  // 닉네임 유효성 검사
+  const validateNickname = (value: string) => {
+    console.log(value);
+    if (value.length === 0) {
+      setNicknameError('');
+      return true;
+    }
+
+    if (value.length < 2 || value.length > 8) {
+      setNicknameError('닉네임은 2~8글자여야 합니다.');
+      return false;
+    }
+
+    // 특수문자 검사 (한글, 영문, 숫자만 허용)
+    if (!/^[가-힣a-zA-Z0-9]+$/.test(value)) {
+      setNicknameError('닉네임에는 특수문자를 사용할 수 없습니다.');
+      return false;
+    }
+
+    setNicknameError('');
+    return true;
+  };
+
+  const handleNicknameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    // 특수문자 제거 (한글, 영문, 숫자만 허용)
+    const filteredValue = value.replace(/[^가-힣a-zA-Z0-9]/g, '');
+    // 8글자 제한
+    const limitedValue = filteredValue.slice(0, 8);
+    setNickname(limitedValue);
+    validateNickname(limitedValue);
+  };
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -49,6 +84,11 @@ export default function Modal({
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    // 닉네임 유효성 검사
+    if (nickname && !validateNickname(nickname)) {
+      return;
+    }
 
     const formData = new FormData();
 
@@ -80,7 +120,7 @@ export default function Modal({
   return (
     <div className={styles.modal_container} onClick={handleBackdropClick}>
       <div className={styles.modal_content}>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className={styles.modal_form}>
           <div className={styles.modal_header}>
             <h2>프로필 수정</h2>
             <button type="button" onClick={onClose}>
@@ -113,13 +153,18 @@ export default function Modal({
             />
           </div>
 
-          <input
-            type="text"
-            placeholder="닉네임을 입력해주세요"
-            className={styles.nickname_input}
-            value={nickname}
-            onChange={(e) => setNickname(e.target.value)}
-          />
+          <div className={styles.input_container}>
+            <input
+              type="text"
+              placeholder="닉네임을 입력해주세요"
+              className={`${styles.nickname_input} ${nicknameError ? styles.error_input : ''}`}
+              value={nickname}
+              onChange={handleNicknameChange}
+            />
+            {nicknameError && (
+              <p className={styles.error_message}>{nicknameError}</p>
+            )}
+          </div>
 
           <button className={styles.confirm_button} type="submit">
             확인
