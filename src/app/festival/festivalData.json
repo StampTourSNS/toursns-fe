@@ -11,7 +11,39 @@
       "active": "Ongoing",
       "nx": 34.893055,
       "ny": 128.608942,
-      "festivalNumber": "1234567890"
+      "festivalNumber": "1234567890",
+      "recommendFood": [
+        {
+          "name": "거제 백반집",
+          "image": "https://picsum.photos/200/300"
+        },
+        {
+          "name": "거제 카레집",
+          "image": "https://picsum.photos/200/300"
+        },
+        {
+          "name": "거제 파스타집",
+          "image": "https://picsum.photos/200/300"
+        },
+        {
+          "name": "거제 빵집",
+          "image": "https://picsum.photos/200/300"
+        }
+      ],
+      "recommendTour": [
+        {
+          "name": "거제 박물관 1",
+          "image": "https://picsum.photos/200/300"
+        },
+        {
+          "name": "거제 박물관 2",
+          "image": "https://picsum.photos/200/300"
+        },
+        {
+          "name": "거제 박물관 3",
+          "image": "https://picsum.photos/200/300"
+        }
+      ]
     },
     {
       "id": 1,
@@ -24,7 +56,19 @@
       "active": "Ongoing",
       "nx": 35.690743,
       "ny": 127.914694,
-      "festivalNumber": "1234567890"
+      "festivalNumber": "1234567890",
+      "recommendFood": [
+        {
+          "name": "거창 백반집",
+          "image": "https://picsum.photos/200/300"
+        }
+      ],
+      "recommendTour": [
+        {
+          "name": "거창 박물관 1",
+          "image": "https://picsum.photos/200/300"
+        }
+      ]
     },
     {
       "id": 2,
@@ -37,7 +81,19 @@
       "active": "Ongoing",
       "nx": 38.3801292,
       "ny": 128.4674385,
-      "festivalNumber": "1234567890"
+      "festivalNumber": "1234567890",
+      "recommendFood": [
+        {
+          "name": "고성 백반집",
+          "image": "https://picsum.photos/200/300"
+        }
+      ],
+      "recommendTour": [
+        {
+          "name": "고성 박물관 1",
+          "image": "https://picsum.photos/200/300"
+        }
+      ]
     },
     {
       "id": 3,
@@ -50,7 +106,19 @@
       "active": "Scheduled",
       "nx": 35.2285451,
       "ny": 128.8893517,
-      "festivalNumber": "1234567890"
+      "festivalNumber": "1234567890",
+      "recommendFood": [
+        {
+          "name": "김해 백반집",
+          "image": "https://picsum.photos/200/300"
+        }
+      ],
+      "recommendTour": [
+        {
+          "name": "김해 박물관 1",
+          "image": "https://picsum.photos/200/300"
+        }
+      ]
     },
     {
       "id": 4,
@@ -63,7 +131,39 @@
       "active": "Ongoing",
       "nx": 34.893055,
       "ny": 128.608942,
-      "festivalNumber": "1234567890"
+      "festivalNumber": "1234567890",
+      "recommendFood": [
+        {
+          "name": "거제 백반집",
+          "image": "https://picsum.photos/200/300"
+        },
+        {
+          "name": "거제 카레집",
+          "image": "https://picsum.photos/200/300"
+        },
+        {
+          "name": "거제 파스타집",
+          "image": "https://picsum.photos/200/300"
+        }
+      ],
+      "recommendTour": [
+        {
+          "name": "거제 박물관 1",
+          "image": "https://picsum.photos/200/300"
+        },
+        {
+          "name": "거제 박물관 2",
+          "image": "https://picsum.photos/200/300"
+        },
+        {
+          "name": "거제 박물관 3",
+          "image": "https://picsum.photos/200/300"
+        },
+        {
+          "name": "거제 박물관 4",
+          "image": "https://picsum.photos/200/300"
+        }
+      ]
     }
   ]
 }
