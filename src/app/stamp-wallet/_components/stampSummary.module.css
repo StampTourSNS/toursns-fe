@@ -1,0 +1,21 @@
+.wrapper {
+  background-color: #d5efff;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.mainText {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.highlight {
+  color: #ff6b6b;
+}
+
+.subText {
+  font-size: 14px;
+  color: #888;
+}
