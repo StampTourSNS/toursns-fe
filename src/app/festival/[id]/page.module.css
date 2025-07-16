@@ -85,13 +85,12 @@
   .festivalInfo {
     flex-direction: column;
     gap: 16px;
-    align-items: center;
     width: 100%;
   }
 
   .festivalImage {
-    width: 90%;
-    height: 100%;
+    width: 100%;
+    height: 300px;
     object-fit: cover;
   }
 
@@ -105,18 +104,7 @@
     gap: 6px;
   }
 
-  .snsButton {
-    font-size: 18px;
-    padding: 12px 16px;
-    height: auto;
-  }
-
   .map {
     min-height: 250px;
-  }
-
-  .recommendFood,
-  .recommendTour {
-    min-height: 220px;
   }
 }
