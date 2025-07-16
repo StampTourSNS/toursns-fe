@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 import {
   ChevronDown,
@@ -11,6 +12,8 @@ import {
   MessageCircle,
   MoreHorizontal,
 } from 'lucide-react';
+
+import { ROUTES } from '@/constants/routes';
 
 import styles from './feedCard.module.css';
 
@@ -83,15 +86,19 @@ export default function FeedCard({
       </div>
       <div className={styles.feed_info_container}>
         <div className={styles.user_info_container}>
-          <div className={styles.user_profile_image_container}>
-            <Image
-              src={feed.user.image}
-              alt="유저 이미지"
-              fill
-              className={styles.user_profile_image}
-            />
-          </div>
-          <p className={styles.user_name}>{feed.user.name}</p>
+          <Link href={ROUTES.MYPAGE(feed.user.id)}>
+            <div className={styles.user_info_wrapper}>
+              <div className={styles.user_profile_image_container}>
+                <Image
+                  src={feed.user.image}
+                  alt="유저 이미지"
+                  fill
+                  className={styles.user_profile_image}
+                />
+              </div>
+              <p className={styles.user_name}>{feed.user.name}</p>
+            </div>
+          </Link>
           <p className={styles.user_created_at}>{feed.user.createdAt}</p>
           <div className={styles.user_menu_container}>
             <p className={styles.user_favorite_count}>
