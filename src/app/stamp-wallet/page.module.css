@@ -1,6 +1,6 @@
 .container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); 
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   margin-top: 20px;
 }
@@ -35,7 +35,6 @@
 }
 
 .name {
-
   font-weight: bold;
   font-size: 20px;
   text-align: center;
@@ -43,5 +42,5 @@
 }
 
 .imageBox:hover .image {
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }

@@ -61,6 +61,7 @@ export default function StampWalletPage() {
             <div key={regionId} className={styles.item}>
               <div className={styles.imageBox}>
                 <Image
+                  fill
                   src={`/images/stamp/${regionId}.png`}
                   alt={region.name}
                   className={styles.image}
