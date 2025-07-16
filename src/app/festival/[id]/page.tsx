@@ -20,6 +20,13 @@ export default function FestivalDetail() {
     return <div>Festival not found</div>;
   }
 
+  const handleMapLinkClick = () => {
+    window.open(
+      `https://map.kakao.com/link/to/${festival?.name},${festival?.nx},${festival?.ny}`,
+      '_blank',
+    );
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.festivalInfo}>
@@ -44,6 +51,9 @@ export default function FestivalDetail() {
           telNumber={festival?.festivalNumber}
           name={festival?.name}
         />
+        <button className={styles.mapLink} onClick={handleMapLinkClick}>
+          길찾기
+        </button>
       </div>
       <div className={styles.recommendFood}>
         <h3>추천 음식점</h3>

@@ -32,6 +32,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.mapLink {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #3f3f3f;
+  background-color: #ffffff;
+  border: 2px solid #ff6f61;
+  padding: 4px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
 }
 
 .recommendFood {
@@ -96,7 +112,6 @@
   }
 
   .map {
-    padding: 16px;
     min-height: 250px;
   }
 
