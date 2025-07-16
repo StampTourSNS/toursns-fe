@@ -13,6 +13,8 @@ import {
   MoreHorizontal,
 } from 'lucide-react';
 
+import { ROUTES } from '@/constants/routes';
+
 import styles from './feedCard.module.css';
 
 interface Feed {
@@ -84,7 +86,7 @@ export default function FeedCard({
       </div>
       <div className={styles.feed_info_container}>
         <div className={styles.user_info_container}>
-          <Link href={`/mypage/${feed.user.id}`}>
+          <Link href={ROUTES.MYPAGE(feed.user.id)}>
             <div className={styles.user_info_wrapper}>
               <div className={styles.user_profile_image_container}>
                 <Image

@@ -8,6 +8,7 @@ import { useParams } from 'next/navigation';
 import { CirclePlus } from 'lucide-react';
 
 import Nav from '@/components/nav/Nav';
+import { ROUTES } from '@/constants/routes';
 
 import Comment from '../_components/comment';
 import FeedCard from '../_components/feedCard';
@@ -37,7 +38,7 @@ export default function Feed() {
           feed={mockData.feed[0]}
         />
       )}
-      <Link href={`/addfeed/${id}`}>
+      <Link href={ROUTES.FEED(id as string)}>
         <CirclePlus className={styles.add_feed_button} />
       </Link>
       <Nav isActive={true} id={id as string} />

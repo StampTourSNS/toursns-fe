@@ -7,6 +7,8 @@ import Link from 'next/link';
 
 import { Ellipsis, User } from 'lucide-react';
 
+import { ROUTES } from '@/constants/routes';
+
 import styles from './CommentUser.module.css';
 
 interface CommentUserProps {
@@ -87,9 +89,9 @@ export default function CommentUser({
   return (
     <div className={styles.comment_user_container} ref={containerRef}>
       <div className={styles.comment_user_info_container}>
-        <Link href={`/mypage/${userId}`}>{renderUserImage()}</Link>
+        <Link href={ROUTES.MYPAGE(userId)}>{renderUserImage()}</Link>
         <div className={styles.comment_user_info}>
-          <Link href={`/mypage/${userId}`}>
+          <Link href={ROUTES.MYPAGE(userId)}>
             <div className={styles.comment_user_name}>
               <p>{name}</p>
             </div>
