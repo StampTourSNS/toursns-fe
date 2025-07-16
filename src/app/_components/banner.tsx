@@ -62,7 +62,7 @@ export default function Banner({ hotFestival }: BannerProps) {
       {/* 메인 슬라이드 */}
       <div className={styles.slide_container}>
         <Link
-          href={`${ROUTES.FESTIVAL}/${currentFestival.id}`}
+          href={`${ROUTES.FESTIVAL_DETAIL(currentFestival.id)}`}
           className={styles.festival_link}
         >
           <Image

@@ -9,7 +9,7 @@ export const ROUTES = {
   POST: '/post',
   POST_DETAIL: (id: string) => `/post/${id}`,
   POST_EDIT: (id: string) => `/post/${id}/edit`,
-  FEED: '/feed',
+  FEED: (id: string) => `/feed/${id}`,
   STAMP: '/stamp',
   STAMP_RANK: '/stamp-rank',
   LIVE: '/live',
