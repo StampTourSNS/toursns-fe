@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 
+import DynamicHeader from '@/components/header/DynamicHeader';
+
 import './globals.css';
 import './reset.css';
 
@@ -16,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
+        <DynamicHeader isLogin={false} />
         <main>{children}</main>
       </body>
     </html>

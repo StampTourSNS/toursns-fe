@@ -1,0 +1,23 @@
+.chip {
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  width: fit-content;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 상태별 색상 정의 */
+.Ongoing {
+  background-color:  rgba(255, 111, 97, 0.543);
+}
+
+.Scheduled {
+  background-color: rgba(115, 255, 120, 0.53);
+}
+
+.End {
+  background-color: #d3d3d3; 
+}

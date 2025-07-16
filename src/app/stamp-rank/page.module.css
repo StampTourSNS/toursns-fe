@@ -1,0 +1,133 @@
+.stamp_rank_container {
+  width: 100%;
+  max-width: 420px;
+  margin: 30px auto;
+  padding-top: 32px;
+}
+
+.top_rank_user_container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 32px;
+  margin-bottom: 32px;
+  position: relative;
+  min-height: 220px;
+}
+
+.podium {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 100%;
+}
+
+.podium_block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+}
+
+.podium_1 {
+  width: 33%;
+  height: 100px;
+  background: #ffff99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: #222;
+}
+
+.podium_2 {
+  width: 33%;
+  height: 70px;
+  background: #b2ffb2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: #222;
+}
+
+.podium_3 {
+  width: 33%;
+  height: 60px;
+  background: #ffb2b2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: #222;
+}
+
+.top_rank_profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 24px;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+.rank_user_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 24px;
+  justify-content: center;
+}
+
+.podium_2 .gray_block {
+  width: 100%;
+  height: 20px;
+  background: #e0e0e0;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  z-index: 2;
+  clip-path: polygon(0 100%, 100% 100%, 100% 0, 20% 0);
+}
+
+.podium_3 .gray_block {
+  width: 100%;
+  height: 20px;
+  background: #e0e0e0;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  z-index: 2;
+  clip-path: polygon(0 100%, 100% 100%, 80% 0, 0 0);
+}
+
+.podium_1 .gray_block {
+  width: 100%;
+  height: 20px;
+  background: #e0e0e0;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  z-index: 2;
+  clip-path: polygon(0 100%, 100% 100%, 85% 0, 15% 0);
+}
+
+.empty_rank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: #f5f5f5;
+  border: 2px dashed #ccc;
+  border-radius: 50%;
+  color: #999;
+  font-size: 24px;
+  font-weight: bold;
+}
