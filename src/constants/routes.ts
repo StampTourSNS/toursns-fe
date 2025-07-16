@@ -19,4 +19,5 @@ export const ROUTES = {
   SEARCH: '/search',
   FESTIVAL: '/festival',
   WALLET: '/stamp-wallet',
+  REGION_WALLET: (id: string) => `/stamp-wallet/${id}`,
 };

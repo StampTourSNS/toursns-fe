@@ -3,8 +3,10 @@
 import React, { useEffect, useState } from 'react';
 
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 
 import CountChip from '@/app/stamp-wallet/_components/countChip';
+import { ROUTES } from '@/constants/routes';
 
 import StampSummary from './_components/stampSummary';
 import styles from './page.module.css';
@@ -36,6 +38,7 @@ const REGION_COORDINATES = [
 ];
 
 export default function StampWalletPage() {
+  const router = useRouter();
   const [data, setData] = useState<StampData[]>([]);
   const totalCount = data.reduce((sum, d) => sum + d.stampCount, 0);
 
@@ -59,7 +62,13 @@ export default function StampWalletPage() {
 
           return (
             <div key={regionId} className={styles.item}>
-              <div className={styles.imageBox}>
+              <div
+                className={styles.imageBox}
+                onClick={() =>
+                  router.push(ROUTES.REGION_WALLET(String(regionId)))
+                }
+                style={{ cursor: 'pointer' }}
+              >
                 <Image
                   fill
                   src={`/images/stamp/${regionId}.png`}
