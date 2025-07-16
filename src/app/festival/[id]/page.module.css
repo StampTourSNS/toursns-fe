@@ -51,17 +51,17 @@
 }
 
 .recommendFood {
-  background-color: #f5f5f5;
-  border-radius: 8px;
-  padding: 20px;
   min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .recommendTour {
-  background-color: #f5f5f5;
-  border-radius: 8px;
-  padding: 20px;
   min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .recommendFood h3 {
