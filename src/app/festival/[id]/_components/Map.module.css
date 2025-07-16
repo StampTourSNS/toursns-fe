@@ -35,25 +35,12 @@
   height: 36px;
   background: #ff6f61;
   border-bottom: 1px solid #ddd;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.info .close {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-  margin-right: 10px;
-  transition: all 0.2s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ffffff;
-  cursor: pointer;
 }
 
 .info .mapBody {
@@ -75,7 +62,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   margin-bottom: 8px;
-  font-size: 13px;
+  font-size: 14px;
   color: #333;
   font-weight: 500;
 }
@@ -85,28 +72,8 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   margin-bottom: 0;
-  font-size: 13px;
+  font-size: 14px;
   color: #666;
-}
-
-.info .desc .ellipsis:after,
-.info .desc .jibunEllipsis:after {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 1px;
-  height: 14px;
-  background: #fff;
-}
-
-.info .desc .ellipsis:after {
-  background: #fff;
-}
-
-.info .desc .jibunEllipsis:after {
-  background: #fff;
 }
 
 /* 반응형 디자인 */
@@ -128,18 +95,12 @@
     height: 100px;
   }
 
-  .info .title {
-    font-size: 14px;
-    padding: 6px 0 6px 10px;
-    height: 32px;
-  }
-
   .info .mapBody {
     padding: 8px;
   }
 
   .info .desc .ellipsis,
   .info .desc .jibunEllipsis {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
