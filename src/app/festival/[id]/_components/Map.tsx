@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import styles from './Map.module.css';
 
@@ -67,6 +67,107 @@ declare global {
   }
 }
 
+const createOverlayContent = (
+  name: string,
+  address?: string,
+  telNumber?: string,
+): string => {
+  return `
+    <div class="${styles.wrap}">
+      <div class="${styles.info}">
+        <div class="${styles.title}">
+          ${name}
+        </div>
+        <div class="${styles.mapBody}">
+          <div class="${styles.desc}">
+            <div class="${styles.ellipsis}">주소: ${address || '주소 정보 없음'}</div>
+            <div class="${styles.jibunEllipsis}">연락처: ${telNumber || '연락처 정보 없음'}</div>
+          </div>
+        </div>
+      </div>
+    </div>`;
+};
+
+const createMapOptions = (lat: number, lng: number): KakaoMapOptions => ({
+  center: new window.kakao.maps.LatLng(lat, lng),
+  level: 3,
+});
+
+const createMarker = (lat: number, lng: number, map: KakaoMap): KakaoMarker => {
+  return new window.kakao.maps.Marker({
+    position: new window.kakao.maps.LatLng(lat, lng),
+    map: map,
+  });
+};
+
+const createCustomOverlay = (
+  content: string,
+  position: KakaoLatLng,
+  map: KakaoMap,
+): KakaoCustomOverlay => {
+  return new window.kakao.maps.CustomOverlay({
+    content: content,
+    position: position,
+    map: map,
+  });
+};
+
+const loadKakaoMapScript = (apiKey: string): Promise<void> => {
+  return new Promise<void>((resolve, reject) => {
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${apiKey}&autoload=false`;
+
+    script.onload = () => resolve();
+    script.onerror = (error) => {
+      console.error('카카오맵 스크립트 로드 실패:', error);
+      reject(error);
+    };
+
+    document.head.appendChild(script);
+  });
+};
+
+const loadKakaoMapScriptFallback = (apiKey: string): Promise<void> => {
+  return new Promise<void>((resolve) => {
+    const script = document.createElement('script');
+    script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${apiKey}`;
+    script.onload = () => resolve();
+    document.head.appendChild(script);
+  });
+};
+
+const useKakaoMap = (apiKey: string) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const initializeKakaoMap = async () => {
+      if (window.kakao && window.kakao.maps) {
+        setIsLoaded(true);
+        return;
+      }
+
+      try {
+        await loadKakaoMapScript(apiKey);
+        setIsLoaded(true);
+      } catch (error) {
+        console.error('카카오맵 로드 실패:', error);
+        try {
+          await loadKakaoMapScriptFallback(apiKey);
+          setIsLoaded(true);
+        } catch {
+          setError('카카오맵을 로드할 수 없습니다.');
+        }
+      }
+    };
+
+    initializeKakaoMap();
+  }, [apiKey]);
+
+  return { isLoaded, error };
+};
+
 export default function Map({
   mapx,
   mapy,
@@ -75,53 +176,23 @@ export default function Map({
   name,
 }: MapProps) {
   const mapRef = useRef<HTMLDivElement>(null);
+  const apiKey = process.env.NEXT_PUBLIC_KAKAO_MAP_API_KEY || '';
+  const { isLoaded, error } = useKakaoMap(apiKey);
 
-  const initMap = () => {
-    if (!mapRef.current) return;
+  const initializeMap = () => {
+    if (!mapRef.current || !isLoaded) return;
 
     try {
       window.kakao.maps.load(() => {
-        const options: KakaoMapOptions = {
-          center: new window.kakao.maps.LatLng(
-            parseFloat(mapx),
-            parseFloat(mapy),
-          ),
-          level: 3,
-        };
+        const lat = parseFloat(mapx);
+        const lng = parseFloat(mapy);
 
+        const options = createMapOptions(lat, lng);
         const map = new window.kakao.maps.Map(mapRef.current!, options);
 
-        // 마커 생성
-        const marker = new window.kakao.maps.Marker({
-          position: new window.kakao.maps.LatLng(
-            parseFloat(mapx),
-            parseFloat(mapy),
-          ),
-          map: map,
-        });
-
-        // 커스텀 오버레이 내용
-        const content = `
-          <div class="${styles.wrap}">
-            <div class="${styles.info}">
-              <div class="${styles.title}">
-                ${name}
-              </div>
-              <div class="${styles.mapBody}">
-                <div class="${styles.desc}">
-                  <div class="${styles.ellipsis}">주소: ${address || '주소 정보 없음'}</div>
-                  <div class="${styles.jibunEllipsis}">연락처: ${telNumber || '연락처 정보 없음'}</div>
-                </div>
-              </div>
-            </div>
-          </div>`;
-
-        // 커스텀 오버레이 생성
-        const overlay = new window.kakao.maps.CustomOverlay({
-          content: content,
-          position: marker.getPosition(),
-          map: map,
-        });
+        const marker = createMarker(lat, lng, map);
+        const content = createOverlayContent(name || '', address, telNumber);
+        const overlay = createCustomOverlay(content, marker.getPosition(), map);
 
         overlay.setMap(map);
       });
@@ -131,57 +202,18 @@ export default function Map({
   };
 
   useEffect(() => {
-    // API 키 유효성 검사
-    const apiKey = process.env.NEXT_PUBLIC_KAKAO_MAP_API_KEY;
-
-    // 카카오맵 스크립트가 이미 로드되어 있는지 확인
-    if (window.kakao && window.kakao.maps) {
-      initMap();
-      return;
+    if (isLoaded) {
+      setTimeout(initializeMap, 100);
     }
+  }, [isLoaded, mapx, mapy, address, telNumber, name]);
 
-    // 카카오맵 스크립트 로드 - 다른 방식 시도
-    const loadKakaoMap = () => {
-      return new Promise<void>((resolve, reject) => {
-        const script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${apiKey}&autoload=false`;
-
-        script.onload = () => {
-          resolve();
-        };
-
-        script.onerror = (error) => {
-          console.error('카카오맵 스크립트 로드 실패:', error);
-          reject(error);
-        };
-
-        document.head.appendChild(script);
-      });
-    };
-
-    // 스크립트 로드 후 지도 초기화
-    loadKakaoMap()
-      .then(() => {
-        // 약간의 지연 후 초기화
-        setTimeout(() => {
-          if (window.kakao && window.kakao.maps) {
-            window.kakao.maps.load(() => {
-              initMap();
-            });
-          }
-        }, 100);
-      })
-      .catch((error) => {
-        console.error('카카오맵 로드 실패:', error);
-        const cdnScript = document.createElement('script');
-        cdnScript.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${apiKey}`;
-        cdnScript.onload = () => {
-          initMap();
-        };
-        document.head.appendChild(cdnScript);
-      });
-  }, [mapx, mapy, address, telNumber, name]);
+  if (error) {
+    return (
+      <div className={styles.mapContainer}>
+        <div className={styles.errorMessage}>{error}</div>
+      </div>
+    );
+  }
 
   return (
     <div className={styles.mapContainer}>
