@@ -8,9 +8,10 @@ import styles from './Nav.module.css';
 
 interface NavProps {
   isActive: boolean;
+  id: string;
 }
 
-export default function Nav({ isActive }: NavProps) {
+export default function Nav({ isActive, id }: NavProps) {
   if (!isActive) {
     return (
       <nav className={styles.nav_inactive}>
@@ -25,7 +26,7 @@ export default function Nav({ isActive }: NavProps) {
     <nav className={styles.nav}>
       <div className={styles.nav_container}>
         <NavItem
-          href={ROUTES.FEED}
+          href={ROUTES.FEED(id)}
           icon={<MessageSquareText size={28} />}
           label="피드"
         />
