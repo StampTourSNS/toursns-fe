@@ -64,6 +64,12 @@
   font-size: 20px;
   text-decoration: none;
   color: inherit;
+  font-weight: bold;
+}
+
+.snsButton:hover {
+  background-color: #ff6f61;
+  color: #ffffff;
 }
 
 .copyText {
@@ -72,4 +78,11 @@
   background-color: #d0d0d0;
   position: fixed;
   bottom: 0;
+}
+
+/* 반응형 디자인 - 524px 이하 */
+@media (max-width: 524px) {
+  .snsButton {
+    height: 48px;
+  }
 }
