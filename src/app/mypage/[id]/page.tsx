@@ -7,6 +7,8 @@ import { useParams } from 'next/navigation';
 
 import { Pencil, User } from 'lucide-react';
 
+import { ROUTES } from '@/constants/routes';
+
 import Card from '../_components/Card';
 import Modal from '../_components/modal';
 import mockData from '../mockData.json';
@@ -59,19 +61,19 @@ export default function MyPage() {
         </div>
       </div>
       <div className={styles.myPage_info_container}>
-        <Link href={`/stamp/${id}`}>
+        <Link href={ROUTES.STAMP(id)}>
           <div className={styles.myPage_info_item}>
             <p className={styles.myPage_info_item_title}>스탬프</p>
             <p className={styles.myPage_info_item_number}>100</p>
           </div>
         </Link>
-        <Link href={`/market`}>
+        <Link href={ROUTES.MARKET}>
           <div className={styles.myPage_info_item_center}>
             <p className={styles.myPage_info_item_title}>코인</p>
             <p className={styles.myPage_info_item_number}>100</p>
           </div>
         </Link>
-        <Link href={`/item`}>
+        <Link href={ROUTES.ITEM}>
           <div className={styles.myPage_info_item}>
             <p className={styles.myPage_info_item_title}>확성기</p>
             <p className={styles.myPage_info_item_number}>100</p>
