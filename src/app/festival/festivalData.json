@@ -14,32 +14,39 @@
       "festivalNumber": "1234567890",
       "recommendFood": [
         {
+          "id": 0,
           "name": "거제 백반집",
           "image": "https://picsum.photos/200/300"
         },
         {
+          "id": 1,
           "name": "거제 카레집",
           "image": "https://picsum.photos/200/300"
         },
         {
+          "id": 2,
           "name": "거제 파스타집",
           "image": "https://picsum.photos/200/300"
         },
         {
+          "id": 3,
           "name": "거제 빵집",
           "image": "https://picsum.photos/200/300"
         }
       ],
       "recommendTour": [
         {
+          "id": 0,
           "name": "거제 박물관 1",
           "image": "https://picsum.photos/200/300"
         },
         {
+          "id": 1,
           "name": "거제 박물관 2",
           "image": "https://picsum.photos/200/300"
         },
         {
+          "id": 2,
           "name": "거제 박물관 3",
           "image": "https://picsum.photos/200/300"
         }
@@ -59,12 +66,14 @@
       "festivalNumber": "1234567890",
       "recommendFood": [
         {
+          "id": 0,
           "name": "거창 백반집",
           "image": "https://picsum.photos/200/300"
         }
       ],
       "recommendTour": [
         {
+          "id": 0,
           "name": "거창 박물관 1",
           "image": "https://picsum.photos/200/300"
         }
@@ -84,12 +93,14 @@
       "festivalNumber": "1234567890",
       "recommendFood": [
         {
+          "id": 0,
           "name": "고성 백반집",
           "image": "https://picsum.photos/200/300"
         }
       ],
       "recommendTour": [
         {
+          "id": 0,
           "name": "고성 박물관 1",
           "image": "https://picsum.photos/200/300"
         }
@@ -109,12 +120,14 @@
       "festivalNumber": "1234567890",
       "recommendFood": [
         {
+          "id": 0,
           "name": "김해 백반집",
           "image": "https://picsum.photos/200/300"
         }
       ],
       "recommendTour": [
         {
+          "id": 0,
           "name": "김해 박물관 1",
           "image": "https://picsum.photos/200/300"
         }
@@ -134,32 +147,39 @@
       "festivalNumber": "1234567890",
       "recommendFood": [
         {
+          "id": 0,
           "name": "거제 백반집",
           "image": "https://picsum.photos/200/300"
         },
         {
+          "id": 1,
           "name": "거제 카레집",
           "image": "https://picsum.photos/200/300"
         },
         {
+          "id": 2,
           "name": "거제 파스타집",
           "image": "https://picsum.photos/200/300"
         }
       ],
       "recommendTour": [
         {
+          "id": 0,
           "name": "거제 박물관 1",
           "image": "https://picsum.photos/200/300"
         },
         {
+          "id": 1,
           "name": "거제 박물관 2",
           "image": "https://picsum.photos/200/300"
         },
         {
+          "id": 2,
           "name": "거제 박물관 3",
           "image": "https://picsum.photos/200/300"
         },
         {
+          "id": 3,
           "name": "거제 박물관 4",
           "image": "https://picsum.photos/200/300"
         }
