@@ -61,18 +61,20 @@ export default function MyPage() {
         </div>
       </div>
       <div className={styles.myPage_info_container}>
-        <Link href={ROUTES.STAMP(id)}>
+        <Link href={ROUTES.STAMP}>
           <div className={styles.myPage_info_item}>
             <p className={styles.myPage_info_item_title}>스탬프</p>
             <p className={styles.myPage_info_item_number}>100</p>
           </div>
         </Link>
+        <div className={styles.myPage_info_item_divider} />
         <Link href={ROUTES.MARKET}>
           <div className={styles.myPage_info_item_center}>
             <p className={styles.myPage_info_item_title}>코인</p>
             <p className={styles.myPage_info_item_number}>100</p>
           </div>
         </Link>
+        <div className={styles.myPage_info_item_divider} />
         <Link href={ROUTES.ITEM}>
           <div className={styles.myPage_info_item}>
             <p className={styles.myPage_info_item_title}>확성기</p>
