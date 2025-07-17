@@ -174,7 +174,8 @@ export default function SearchPage() {
 
         {/* 축제별 게시글 그룹 */}
         {festivalPostGroups.map((group) => (
-          <div
+          <Link
+            href={ROUTES.FEED(String(group.festivalId))}
             className={styles.festivalPostGroup}
             key={`festival-posts-${group.festivalId}`}
           >
@@ -185,7 +186,7 @@ export default function SearchPage() {
               <h3>{group.festivalName}</h3>
               <span className={styles.searchResultType}>post</span>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>
