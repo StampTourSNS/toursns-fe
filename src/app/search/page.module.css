@@ -1,5 +1,12 @@
+.container {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 .searchContainer {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .searchInputContainer {
@@ -40,14 +47,12 @@
 .searchResultContainer {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 36px;
 }
 
 .searchResultItem {
   display: flex;
   gap: 15px;
-  padding: 15px;
-  border-radius: 8px;
   background-color: white;
   align-items: center;
   cursor: pointer;
@@ -65,8 +70,9 @@
 
 .searchResultItemContent h3 {
   margin: 0 0 8px 0;
-  font-size: 18px;
+  font-size: 20px;
   color: #333;
+  font-weight: 600;
 }
 
 .searchResultItemContent p {
@@ -91,8 +97,6 @@
   display: flex;
   flex-direction: row;
   gap: 16px;
-  padding: 15px;
-  border-radius: 8px;
   background-color: white;
   align-items: center;
   cursor: pointer;
@@ -102,11 +106,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 64px;
-  height: 64px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  background-color: #ff6f61;
-  color: white;
+  background-color: #ffffff;
+  border: 4px solid #ff6f61;
+  color: #ff6f61;
   font-size: 42px;
   font-weight: 800;
 }
@@ -121,5 +126,5 @@
 .festivalPostGroupInfo h3 {
   font-size: 20px;
   color: #333;
-  font-weight: 700;
+  font-weight: 600;
 }

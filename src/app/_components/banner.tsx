@@ -13,7 +13,7 @@ import styles from './Banner.module.css';
 
 interface BannerProps {
   hotFestival: {
-    id: string;
+    id: number;
     name: string;
     image: string;
     address: string;
@@ -62,7 +62,7 @@ export default function Banner({ hotFestival }: BannerProps) {
       {/* 메인 슬라이드 */}
       <div className={styles.slide_container}>
         <Link
-          href={`${ROUTES.FESTIVAL_DETAIL(currentFestival.id)}`}
+          href={ROUTES.FESTIVAL_DETAIL(String(currentFestival.id))}
           className={styles.festival_link}
         >
           <Image
