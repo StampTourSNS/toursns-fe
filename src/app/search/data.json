@@ -1,0 +1,257 @@
+{
+  "festivals": [
+    {
+      "id": 0,
+      "name": "거제시 거제대학로 축제",
+      "image": null,
+      "address": "경상남도 거제시 거제대학로 123",
+      "startDate": "2025-01-01",
+      "endDate": "2025-01-01",
+      "festivalRegion": "0",
+      "active": "Ongoing",
+      "nx": 34.893055,
+      "ny": 128.608942,
+      "festivalNumber": "1234567890",
+      "recommendFood": [
+        {
+          "id": 0,
+          "name": "거제 백반집",
+          "image": "https://picsum.photos/200/300"
+        },
+        {
+          "id": 1,
+          "name": "거제 카레집",
+          "image": "https://picsum.photos/200/300"
+        },
+        {
+          "id": 2,
+          "name": "거제 파스타집",
+          "image": "https://picsum.photos/200/300"
+        },
+        {
+          "id": 3,
+          "name": "거제 빵집",
+          "image": "https://picsum.photos/200/300"
+        }
+      ],
+      "recommendTour": [
+        {
+          "id": 0,
+          "name": "거제 박물관 1",
+          "image": "https://picsum.photos/200/300"
+        },
+        {
+          "id": 1,
+          "name": "거제 박물관 2",
+          "image": "https://picsum.photos/200/300"
+        },
+        {
+          "id": 2,
+          "name": "거제 박물관 3",
+          "image": "https://picsum.photos/200/300"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "거창군 거창대학로 축제",
+      "image": "https://picsum.photos/200/300",
+      "address": "경상남도 거창군 거창대학로 123",
+      "startDate": "2025-01-01",
+      "endDate": "2025-01-01",
+      "festivalRegion": "1",
+      "active": "Ongoing",
+      "nx": 35.690743,
+      "ny": 127.914694,
+      "festivalNumber": "1234567890",
+      "recommendFood": [
+        {
+          "id": 0,
+          "name": "거창 백반집",
+          "image": "https://picsum.photos/200/300"
+        }
+      ],
+      "recommendTour": [
+        {
+          "id": 0,
+          "name": "거창 박물관 1",
+          "image": "https://picsum.photos/200/300"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "고성군 고성대학로 축제",
+      "image": "https://picsum.photos/200/300",
+      "address": "경상남도 고성군 고성대학로 123",
+      "startDate": "2025-01-01",
+      "endDate": "2025-01-01",
+      "festivalRegion": "2",
+      "active": "Ongoing",
+      "nx": 38.3801292,
+      "ny": 128.4674385,
+      "festivalNumber": "1234567890",
+      "recommendFood": [
+        {
+          "id": 0,
+          "name": "고성 백반집",
+          "image": "https://picsum.photos/200/300"
+        }
+      ],
+      "recommendTour": [
+        {
+          "id": 0,
+          "name": "고성 박물관 1",
+          "image": "https://picsum.photos/200/300"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "김해시 김해대학로 축제",
+      "image": "https://picsum.photos/200/300",
+      "address": "경상남도 김해시 김해대학로 123",
+      "startDate": "2025-01-01",
+      "endDate": "2025-01-01",
+      "festivalRegion": "3",
+      "active": "Scheduled",
+      "nx": 35.2285451,
+      "ny": 128.8893517,
+      "festivalNumber": "1234567890",
+      "recommendFood": [
+        {
+          "id": 0,
+          "name": "김해 백반집",
+          "image": "https://picsum.photos/200/300"
+        }
+      ],
+      "recommendTour": [
+        {
+          "id": 0,
+          "name": "김해 박물관 1",
+          "image": "https://picsum.photos/200/300"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "거제시 축제",
+      "image": "https://picsum.photos/200/300",
+      "address": "경상남도 거제시 거제대학로 12345",
+      "startDate": "2025-01-01",
+      "endDate": "2025-01-01",
+      "festivalRegion": "0",
+      "active": "Ongoing",
+      "nx": 34.893055,
+      "ny": 128.608942,
+      "festivalNumber": "1234567890",
+      "recommendFood": [
+        {
+          "id": 0,
+          "name": "거제 백반집",
+          "image": "https://picsum.photos/200/300"
+        },
+        {
+          "id": 1,
+          "name": "거제 카레집",
+          "image": "https://picsum.photos/200/300"
+        },
+        {
+          "id": 2,
+          "name": "거제 파스타집",
+          "image": "https://picsum.photos/200/300"
+        }
+      ],
+      "recommendTour": [
+        {
+          "id": 0,
+          "name": "거제 박물관 1",
+          "image": "https://picsum.photos/200/300"
+        },
+        {
+          "id": 1,
+          "name": "거제 박물관 2",
+          "image": "https://picsum.photos/200/300"
+        },
+        {
+          "id": 2,
+          "name": "거제 박물관 3",
+          "image": "https://picsum.photos/200/300"
+        },
+        {
+          "id": 3,
+          "name": "거제 박물관 4",
+          "image": "https://picsum.photos/200/300"
+        }
+      ]
+    }
+  ],
+  "users": [
+    {
+      "id": 0,
+      "name": "김철수",
+      "image": "https://picsum.photos/200/300",
+      "email": "kim@gmail.com"
+    },
+    {
+      "id": 1,
+      "name": "이영희",
+      "image": "https://picsum.photos/200/300",
+      "email": "lee@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "박영희",
+      "image": "https://picsum.photos/200/300",
+      "email": "park@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "거제돌이",
+      "image": null,
+      "email": "gj@gmail.com"
+    }
+  ],
+  "posts": [
+    {
+      "id": 0,
+      "title": "거제시 거제대학로 축제",
+      "content": "거제시 거제대학로 축제는 거제시에서 매년 개최하는 축제입니다.",
+      "image": "https://picsum.photos/200/300",
+      "userId": 0,
+      "festivalId": 0,
+      "createdAt": "2025-01-01",
+      "updatedAt": "2025-01-01"
+    },
+    {
+      "id": 1,
+      "title": "거제시 축제",
+      "content": "거제시 축제는 거제시에서 매년 개최하는 축제입니다.",
+      "image": "https://picsum.photos/200/300",
+      "userId": 0,
+      "festivalId": 4,
+      "createdAt": "2025-01-01",
+      "updatedAt": "2025-01-01"
+    },
+    {
+      "id": 2,
+      "title": "고성 축제",
+      "content": "고성 축제는 고성에서 매년 개최하는 축제입니다.",
+      "image": "https://picsum.photos/200/300",
+      "userId": 0,
+      "festivalId": 2,
+      "createdAt": "2025-01-01",
+      "updatedAt": "2025-01-01"
+    },
+    {
+      "id": 3,
+      "title": "거제시 축제",
+      "content": "거제시 축제는 거제시에서 매년 개최하는 축제입니다.",
+      "image": "https://picsum.photos/200/300",
+      "userId": 0,
+      "festivalId": 4,
+      "createdAt": "2025-01-01",
+      "updatedAt": "2025-01-01"
+    }
+  ]
+}
