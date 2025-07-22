@@ -38,7 +38,7 @@ export default function Feed() {
           feed={mockData.feed[0]}
         />
       )}
-      <Link href={ROUTES.FEED(id as string)}>
+      <Link href={ROUTES.ADD_FEED(id as string)}>
         <CirclePlus className={styles.add_feed_button} />
       </Link>
       <Nav isActive={true} id={id as string} />
