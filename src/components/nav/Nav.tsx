@@ -31,7 +31,7 @@ export default function Nav({ isActive, id }: NavProps) {
           label="피드"
         />
         <div className={styles.nav_live}>
-          <Link href={ROUTES.LIVE}>
+          <Link href={ROUTES.LIVE(id)}>
             <PartyPopper size={42} color="white" />
           </Link>
         </div>

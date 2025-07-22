@@ -12,7 +12,7 @@ export const ROUTES = {
   FEED: (id: string) => `/feed/${id}`,
   STAMP: '/stamp',
   STAMP_RANK: '/stamp-rank',
-  LIVE: '/live',
+  LIVE: (id: string) => `/live/${id}`,
   MARKET: '/market',
   ITEM: '/item',
   SEARCH: '/search',
