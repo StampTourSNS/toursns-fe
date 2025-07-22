@@ -28,7 +28,6 @@
 
 .map {
   border-radius: 8px;
-  min-height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,9 +101,5 @@
 
   .weatherInfo {
     gap: 6px;
-  }
-
-  .map {
-    min-height: 250px;
   }
 }
