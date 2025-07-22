@@ -1,0 +1,52 @@
+{
+  "userItems": {
+    "1": {
+      "id": 1,
+      "name": "아이템 A",
+      "description": "첫 번째 아이템입니다",
+      "image": "/images/bg_festival_item.png",
+      "items": [
+        {
+          "itemId": "1",
+          "acquiredAt": "2024-01-15T10:30:00Z"
+        },
+        {
+          "itemId": "2",
+          "acquiredAt": "2024-01-20T14:15:00Z"
+        }
+      ]
+    },
+    "2": {
+      "id": 2,
+      "name": "아이템 B",
+      "description": "두 번째 아이템입니다",
+      "image": "/images/bg_festival_item.png",
+      "items": [
+        {
+          "itemId": "3",
+          "acquiredAt": "2024-01-10T09:00:00Z"
+        },
+        {
+          "itemId": "4",
+          "acquiredAt": "2024-01-25T16:45:00Z"
+        },
+        {
+          "itemId": "5",
+          "acquiredAt": "2024-02-01T11:20:00Z"
+        }
+      ]
+    },
+    "3": {
+      "id": 3,
+      "name": "아이템 C",
+      "description": "세 번째 아이템입니다",
+      "image": "/images/bg_festival_item.png",
+      "items": [
+        {
+          "itemId": "6",
+          "acquiredAt": "2024-02-01T11:20:00Z"
+        }
+      ]
+    }
+  }
+}
