@@ -58,12 +58,8 @@ export default function Modal({
 
   const handleNicknameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
-    // 특수문자 제거 (한글, 영문, 숫자만 허용)
-    const filteredValue = value.replace(/[^가-힣a-zA-Z0-9]/g, '');
-    // 8글자 제한
-    const limitedValue = filteredValue.slice(0, 8);
-    setNickname(limitedValue);
-    validateNickname(limitedValue);
+    setNickname(value);
+    validateNickname(value);
   };
 
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {

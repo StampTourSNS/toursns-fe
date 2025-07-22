@@ -13,11 +13,6 @@
   height: 100%;
 }
 
-.item_card_container:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
 .item_card_image_container {
   display: flex;
   justify-content: center;
