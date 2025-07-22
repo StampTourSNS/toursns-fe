@@ -2,15 +2,24 @@
 
 import { useState } from 'react';
 
+import Link from 'next/link';
+import { useParams } from 'next/navigation';
+
 import { Pencil, User } from 'lucide-react';
 
-import Card from './_components/Card';
-import Modal from './_components/modal';
-import mockData from './mockData.json';
+import { ROUTES } from '@/constants/routes';
+
+import Card from '../_components/Card';
+import Modal from '../_components/modal';
+import mockData from '../mockData.json';
+
 import styles from './mypage.module.css';
 
 export default function MyPage() {
+  const { id } = useParams();
   const [isOpen, setIsOpen] = useState(false);
+
+  console.log(id);
   const handleOpen = () => {
     setIsOpen(true);
   };
@@ -52,18 +61,26 @@ export default function MyPage() {
         </div>
       </div>
       <div className={styles.myPage_info_container}>
-        <div className={styles.myPage_info_item}>
-          <p className={styles.myPage_info_item_title}>스탬프</p>
-          <p className={styles.myPage_info_item_number}>100</p>
-        </div>
-        <div className={styles.myPage_info_item_center}>
-          <p className={styles.myPage_info_item_title}>코인</p>
-          <p className={styles.myPage_info_item_number}>100</p>
-        </div>
-        <div className={styles.myPage_info_item}>
-          <p className={styles.myPage_info_item_title}>확성기</p>
-          <p className={styles.myPage_info_item_number}>100</p>
-        </div>
+        <Link href={ROUTES.STAMP}>
+          <div className={styles.myPage_info_item}>
+            <p className={styles.myPage_info_item_title}>스탬프</p>
+            <p className={styles.myPage_info_item_number}>100</p>
+          </div>
+        </Link>
+        <div className={styles.myPage_info_item_divider} />
+        <Link href={ROUTES.MARKET}>
+          <div className={styles.myPage_info_item_center}>
+            <p className={styles.myPage_info_item_title}>코인</p>
+            <p className={styles.myPage_info_item_number}>100</p>
+          </div>
+        </Link>
+        <div className={styles.myPage_info_item_divider} />
+        <Link href={ROUTES.ITEM}>
+          <div className={styles.myPage_info_item}>
+            <p className={styles.myPage_info_item_title}>확성기</p>
+            <p className={styles.myPage_info_item_number}>100</p>
+          </div>
+        </Link>
       </div>
       <div className={styles.mypage_post_container}>
         <h1 className={styles.mypage_post_title}>게시물</h1>

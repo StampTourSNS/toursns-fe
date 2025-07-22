@@ -1,6 +1,6 @@
 export const ROUTES = {
   HOME: '/',
-  MYPAGE: '/mypage',
+  MYPAGE: (id: string) => `/mypage/${id}`,
   LOGIN: '/login',
   REGISTER: '/register',
   LOGOUT: '/logout',
@@ -13,7 +13,10 @@ export const ROUTES = {
   STAMP: '/stamp',
   STAMP_RANK: '/stamp-rank',
   LIVE: '/live',
+  MARKET: '/market',
+  ITEM: '/item',
   SEARCH: '/search',
   FESTIVAL_DETAIL: (id: string) => `/festival/${id}`,
   ADD_FEED: (id: string) => `/addfeed/${id}`,
+  WALLET: '/stamp-wallet',
 };

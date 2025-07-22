@@ -18,6 +18,7 @@
   height: 45px;
   position: relative;
   margin-top: 12px;
+  cursor: pointer;
 }
 
 .title_container {
