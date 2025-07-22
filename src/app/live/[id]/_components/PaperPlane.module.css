@@ -1,0 +1,42 @@
+.paperPlane {
+  position: fixed;
+  z-index: 1001;
+  pointer-events: none;
+  transform-origin: center;
+  left: 0;
+  right: 0;
+}
+
+.paperPlaneContent {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  transform: rotate(-45deg);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paperPlaneContent::before {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+}
+
+.paperPlaneContent::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+}
+
+.exploding {
+  z-index: 1002;
+}
