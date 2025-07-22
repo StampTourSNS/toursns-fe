@@ -17,4 +17,5 @@ export const ROUTES = {
   ITEM: '/item',
   SEARCH: '/search',
   FESTIVAL_DETAIL: (id: string) => `/festival/${id}`,
+  WALLET: '/stamp-wallet',
 };
