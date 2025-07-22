@@ -61,7 +61,7 @@ export default function MyPage() {
         </div>
       </div>
       <div className={styles.myPage_info_container}>
-        <Link href={ROUTES.STAMP}>
+        <Link href={ROUTES.WALLET}>
           <div className={styles.myPage_info_item}>
             <p className={styles.myPage_info_item_title}>스탬프</p>
             <p className={styles.myPage_info_item_number}>100</p>

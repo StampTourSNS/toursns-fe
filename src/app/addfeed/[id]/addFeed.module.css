@@ -84,6 +84,9 @@
 .send_btn:hover {
   background: #ff6f61;
 }
+.textarea {
+  outline: none;
+}
 
 @media (max-width: 445px) {
   .textarea {

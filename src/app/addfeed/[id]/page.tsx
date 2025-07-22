@@ -3,9 +3,11 @@
 import React, { useRef, useState } from 'react';
 
 import Image from 'next/image';
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 
 import { ChevronRight, Send } from 'lucide-react';
+
+import { ROUTES } from '@/constants/routes';
 
 import styles from './addFeed.module.css';
 
@@ -15,7 +17,7 @@ const AddFeed = () => {
   const [showTextInput, setShowTextInput] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const { id } = useParams();
-  console.log(id);
+  const router = useRouter();
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
@@ -29,9 +31,9 @@ const AddFeed = () => {
     setShowTextInput(true);
   };
 
-  const handleSendClick = () => {
-    // 전송 로직 작성
-    alert('전송!');
+  const handleSendClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    router.push(ROUTES.FEED(id as string));
   };
 
   return (
