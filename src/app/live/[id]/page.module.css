@@ -1,0 +1,108 @@
+.liveContainer {
+  height: 95%;
+  background: linear-gradient(
+    135deg,
+    #0a0a0a 0%,
+    #1a1a2e 30%,
+    #16213e 70%,
+    #0f3460 100%
+  );
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: -16px -16px 0 -16px;
+  overflow: hidden;
+  z-index: 9999;
+  padding: 0 16px;
+}
+
+/* 밤하늘 별들 */
+.liveContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(1px 1px at 15px 25px, #fff, transparent),
+    radial-gradient(2px 2px at 67px 43px, #fff, transparent),
+    radial-gradient(1px 1px at 123px 78px, #fff, transparent),
+    radial-gradient(1px 1px at 189px 12px, #fff, transparent),
+    radial-gradient(2px 2px at 234px 56px, #fff, transparent),
+    radial-gradient(1px 1px at 298px 89px, #fff, transparent),
+    radial-gradient(1px 1px at 345px 34px, #fff, transparent),
+    radial-gradient(2px 2px at 412px 67px, #fff, transparent),
+    radial-gradient(1px 1px at 478px 23px, #fff, transparent),
+    radial-gradient(1px 1px at 534px 81px, #fff, transparent),
+    radial-gradient(2px 2px at 589px 45px, #fff, transparent),
+    radial-gradient(1px 1px at 623px 92px, #fff, transparent),
+    radial-gradient(1px 1px at 45px 67px, #fff, transparent),
+    radial-gradient(2px 2px at 156px 89px, #fff, transparent),
+    radial-gradient(1px 1px at 267px 34px, #fff, transparent),
+    radial-gradient(1px 1px at 378px 78px, #fff, transparent),
+    radial-gradient(2px 2px at 489px 12px, #fff, transparent),
+    radial-gradient(1px 1px at 567px 56px, #fff, transparent),
+    radial-gradient(1px 1px at 89px 23px, #fff, transparent),
+    radial-gradient(2px 2px at 178px 67px, #fff, transparent),
+    radial-gradient(1px 1px at 267px 45px, #fff, transparent),
+    radial-gradient(1px 1px at 356px 81px, #fff, transparent),
+    radial-gradient(2px 2px at 445px 34px, #fff, transparent),
+    radial-gradient(1px 1px at 534px 92px, #fff, transparent),
+    radial-gradient(1px 1px at 623px 23px, #fff, transparent),
+    radial-gradient(2px 2px at 34px 78px, #fff, transparent),
+    radial-gradient(1px 1px at 123px 12px, #fff, transparent),
+    radial-gradient(1px 1px at 212px 56px, #fff, transparent),
+    radial-gradient(2px 2px at 301px 89px, #fff, transparent),
+    radial-gradient(1px 1px at 390px 45px, #fff, transparent),
+    radial-gradient(1px 1px at 479px 67px, #fff, transparent),
+    radial-gradient(2px 2px at 568px 34px, #fff, transparent),
+    radial-gradient(1px 1px at 78px 81px, #fff, transparent),
+    radial-gradient(1px 1px at 167px 23px, #fff, transparent),
+    radial-gradient(2px 2px at 256px 92px, #fff, transparent),
+    radial-gradient(1px 1px at 345px 56px, #fff, transparent),
+    radial-gradient(1px 1px at 434px 12px, #fff, transparent),
+    radial-gradient(2px 2px at 523px 78px, #fff, transparent),
+    radial-gradient(1px 1px at 612px 45px, #fff, transparent),
+    radial-gradient(1px 1px at 23px 67px, #fff, transparent),
+    radial-gradient(2px 2px at 112px 34px, #fff, transparent),
+    radial-gradient(1px 1px at 201px 81px, #fff, transparent),
+    radial-gradient(1px 1px at 290px 23px, #fff, transparent),
+    radial-gradient(2px 2px at 379px 92px, #fff, transparent),
+    radial-gradient(1px 1px at 468px 56px, #fff, transparent),
+    radial-gradient(1px 1px at 557px 12px, #fff, transparent),
+    radial-gradient(2px 2px at 646px 78px, #fff, transparent),
+    radial-gradient(1px 1px at 89px 45px, #fff, transparent),
+    radial-gradient(1px 1px at 178px 67px, #fff, transparent),
+    radial-gradient(2px 2px at 267px 34px, #fff, transparent),
+    radial-gradient(1px 1px at 356px 81px, #fff, transparent),
+    radial-gradient(1px 1px at 445px 23px, #fff, transparent),
+    radial-gradient(2px 2px at 534px 92px, #fff, transparent),
+    radial-gradient(1px 1px at 623px 56px, #fff, transparent),
+    radial-gradient(1px 1px at 34px 12px, #fff, transparent),
+    radial-gradient(2px 2px at 123px 78px, #fff, transparent),
+    radial-gradient(1px 1px at 212px 45px, #fff, transparent),
+    radial-gradient(1px 1px at 301px 67px, #fff, transparent),
+    radial-gradient(2px 2px at 390px 34px, #fff, transparent),
+    radial-gradient(1px 1px at 479px 81px, #fff, transparent),
+    radial-gradient(1px 1px at 568px 23px, #fff, transparent),
+    radial-gradient(2px 2px at 657px 92px, #fff, transparent);
+  background-repeat: repeat;
+  background-size: 700px 120px;
+  animation: twinkle 4s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+}
