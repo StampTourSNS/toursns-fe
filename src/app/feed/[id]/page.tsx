@@ -23,27 +23,25 @@ export default function Feed() {
   const { id } = useParams();
 
   return (
-    <>
-      <div className={styles.feed_container}>
-        {mockData.feed.map((feed) => (
-          <FeedCard
-            key={feed.id}
-            feed={feed}
-            onCommentClick={handleShowComment}
-          />
-        ))}
-        {showComment && (
-          <Comment
-            show={showComment}
-            onClose={handleHideComment}
-            feed={mockData.feed[0]}
-          />
-        )}
-        <Link href={ROUTES.ADD_FEED(id as string)}>
-          <CirclePlus className={styles.add_feed_button} />
-        </Link>
-        <Nav isActive={true} id={id as string} />
-      </div>
-    </>
+    <div className={styles.feed_container}>
+      {mockData.feed.map((feed) => (
+        <FeedCard
+          key={feed.id}
+          feed={feed}
+          onCommentClick={handleShowComment}
+        />
+      ))}
+      {showComment && (
+        <Comment
+          show={showComment}
+          onClose={handleHideComment}
+          feed={mockData.feed[0]}
+        />
+      )}
+      <Link href={ROUTES.ADD_FEED(id as string)}>
+        <CirclePlus className={styles.add_feed_button} />
+      </Link>
+      <Nav isActive={true} id={id as string} />
+    </div>
   );
 }
