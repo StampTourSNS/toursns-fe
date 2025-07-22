@@ -17,5 +17,6 @@ export const ROUTES = {
   ITEM: '/item',
   SEARCH: '/search',
   FESTIVAL_DETAIL: (id: string) => `/festival/${id}`,
+  ADD_FEED: (id: string) => `/addfeed/${id}`,
   WALLET: '/stamp-wallet',
 };

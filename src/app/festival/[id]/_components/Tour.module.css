@@ -3,8 +3,7 @@
   flex-direction: row;
   gap: 16px;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .tourItem {
@@ -28,12 +27,4 @@
   font-weight: 600;
   color: #333;
   text-align: center;
-}
-
-@media (max-width: 527px) {
-  .tourList {
-    gap: 16px;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
 }
