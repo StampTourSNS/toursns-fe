@@ -4,7 +4,7 @@ import FestivalModal from './FestivalModal';
 import styles from './Map.module.css';
 
 interface Festival {
-  id: string;
+  id: number;
   name: string;
   image: string;
   address: string;

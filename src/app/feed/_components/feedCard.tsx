@@ -86,7 +86,7 @@ export default function FeedCard({
       </div>
       <div className={styles.feed_info_container}>
         <div className={styles.user_info_container}>
-          <Link href={ROUTES.MYPAGE(feed.user.id)}>
+          <Link href={ROUTES.MYPAGE(String(feed.user.id))}>
             <div className={styles.user_info_wrapper}>
               <div className={styles.user_profile_image_container}>
                 <Image
