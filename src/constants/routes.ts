@@ -15,4 +15,5 @@ export const ROUTES = {
   LIVE: '/live',
   SEARCH: '/search',
   FESTIVAL_DETAIL: (id: string) => `/festival/${id}`,
+  ADD_FEED: (id: string) => `/addfeed/${id}`,
 };
