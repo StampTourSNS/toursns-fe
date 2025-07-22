@@ -7,7 +7,7 @@ import { ROUTES } from '@/constants/routes';
 import styles from './FestivalModal.module.css';
 
 interface Festival {
-  id: string;
+  id: number;
   name: string;
   image: string;
   address: string;
@@ -64,7 +64,7 @@ export default function FestivalModal({
           ) : (
             selectedFestival.map((festival) => (
               <Link
-                href={`${ROUTES.FESTIVAL}/${festival.id}`}
+                href={ROUTES.FESTIVAL_DETAIL(String(festival.id))}
                 key={festival.id}
                 className={`${styles.festival_item} ${styles.status} ${styles[festival.active.toLowerCase()]}`}
               >

@@ -4,7 +4,7 @@ import FestivalModal from './FestivalModal';
 import styles from './Map.module.css';
 
 interface Festival {
-  id: string;
+  id: number;
   name: string;
   image: string;
   address: string;
@@ -36,8 +36,8 @@ const STROKE_WIDTH = {
 // 각 지역의 좌표 정의 (viewBox 기준) - 각 지역의 중심점으로 조정
 const REGION_COORDINATES = [
   { index: 0, id: 'GeoJea', name: '거제시', x: 2620, y: 532 },
-  { index: 1, id: 'GoSung', name: '고성군', x: 2558, y: 500 },
-  { index: 2, id: 'GeoChang', name: '거창군', x: 2490, y: 340 },
+  { index: 1, id: 'GeoChang', name: '거창군', x: 2490, y: 340 },
+  { index: 2, id: 'GoSung', name: '고성군', x: 2558, y: 500 },
   { index: 3, id: 'KimHea', name: '김해시', x: 2658, y: 445 },
   { index: 4, id: 'NamHea', name: '남해군', x: 2489, y: 548 },
   { index: 5, id: 'MeelYang', name: '밀양시', x: 2645, y: 395 },
@@ -77,7 +77,6 @@ export default function Map({ Festival }: { Festival: Festival[] }) {
     // 축제가 있는 지역만 클릭 가능
     if (hasActiveFestival || hasSoonActiveFestival) {
       setSelectedRegion(regionId);
-      console.log(`축제가 있는 지역 클릭: ${regionId}, 인덱스: ${regionIndex}`);
       setSelectedFestival(
         Festival.filter(
           (festival) => festival.festivalRegion === regionIndex.toString(),

@@ -4,14 +4,15 @@
   font-size: 14px;
   font-weight: bold;
   color: black;
-  text-align: center;
-  width: fit-content;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* 상태별 색상 정의 */
 .Ongoing {
-  background-color:  rgba(255, 111, 97, 0.543);
+  background-color: rgba(255, 111, 97, 0.543);
 }
 
 .Scheduled {
@@ -19,5 +20,5 @@
 }
 
 .End {
-  background-color: #d3d3d3; 
+  background-color: #d3d3d3;
 }

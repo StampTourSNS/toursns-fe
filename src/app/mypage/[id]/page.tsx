@@ -67,12 +67,14 @@ export default function MyPage() {
             <p className={styles.myPage_info_item_number}>100</p>
           </div>
         </Link>
+        <div className={styles.myPage_info_item_divider} />
         <Link href={ROUTES.MARKET}>
           <div className={styles.myPage_info_item_center}>
             <p className={styles.myPage_info_item_title}>코인</p>
             <p className={styles.myPage_info_item_number}>100</p>
           </div>
         </Link>
+        <div className={styles.myPage_info_item_divider} />
         <Link href={ROUTES.ITEM}>
           <div className={styles.myPage_info_item}>
             <p className={styles.myPage_info_item_title}>확성기</p>
