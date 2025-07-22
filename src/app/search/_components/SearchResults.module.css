@@ -1,0 +1,110 @@
+.searchResultContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.searchResultItem {
+  display: flex;
+  gap: 15px;
+  background-color: white;
+  align-items: center;
+  cursor: pointer;
+}
+
+.searchResultItem:hover {
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #f5f5f5;
+  transition: all 0.2s ease-in-out;
+}
+
+.searchResultItemImage {
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+}
+
+.searchResultItemContent h3 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+}
+
+.searchResultItemContent p {
+  margin: 0 0 8px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.searchResultType {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: #ff6f61;
+  color: white;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  width: fit-content;
+}
+
+/* 축제별 게시글 그룹 스타일 */
+.festivalPostGroup {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  background-color: white;
+  align-items: center;
+  cursor: pointer;
+}
+
+.festivalPostGroupCount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 4px solid #ff6f61;
+  color: #ff6f61;
+  font-size: 42px;
+  font-weight: 800;
+}
+
+.festivalPostGroup:hover {
+  padding: 10px;
+  border-radius: 15px;
+  background-color: #f5f5f5;
+  transition: all 0.2s ease-in-out;
+}
+
+.festivalPostGroupInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.festivalPostGroupInfo h3 {
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+}
+
+.noResults {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.noResults p {
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
