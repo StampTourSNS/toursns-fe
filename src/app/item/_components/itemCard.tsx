@@ -1,4 +1,5 @@
-// import Image from 'next/image';
+import Image from 'next/image';
+
 import styles from './itemCard.module.css';
 
 interface MyItem {
@@ -6,19 +7,20 @@ interface MyItem {
   itemId: number;
   itemName: string;
   quantity: number;
+  imageUrl: string;
 }
 
 export default function ItemCard({ item }: { item: MyItem }) {
   return (
     <div className={styles.item_card_container}>
       <div className={styles.item_card_image_container}>
-        {/* <Image
-          src={item.image}
+        <Image
+          src={item.imageUrl}
           alt="아이템 이미지"
           className={styles.item_card_image}
           width={200}
           height={200}
-        /> */}
+        />
         <div className={styles.item_count}>
           <span className={styles.item_count_x}>X</span>
           {item.quantity}

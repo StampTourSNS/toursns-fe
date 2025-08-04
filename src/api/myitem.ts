@@ -7,6 +7,7 @@ export interface MyItemResponse {
     itemId: number;
     itemName: string;
     quantity: number;
+    imageUrl: string;
   }[];
 }
 export const getMyItem = async (): Promise<MyItemResponse> => {
