@@ -26,6 +26,7 @@ const AddFeed = () => {
       reader.readAsDataURL(file);
     }
   };
+  const isButtonDisabled = !image && !text;
 
   const handleNextClick = () => {
     setShowTextInput(true);
@@ -81,9 +82,10 @@ const AddFeed = () => {
               name="text"
             />
             <button
-              className={styles.send_btn}
+              className={`${styles.send_btn} ${isButtonDisabled ? styles.disabled : ''}`}
               onClick={handleSendClick}
               type="submit"
+              disabled={isButtonDisabled}
             >
               <Send size={28} />
             </button>
