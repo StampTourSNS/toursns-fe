@@ -20,11 +20,13 @@ type Story = StoryObj<typeof meta>;
 export const Active: Story = {
   args: {
     isActive: true,
+    id: '1',
   },
 };
 
 export const InActive: Story = {
   args: {
     isActive: false,
+    id: '1',
   },
 };

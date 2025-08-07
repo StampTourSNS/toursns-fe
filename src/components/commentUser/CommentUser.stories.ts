@@ -39,6 +39,7 @@ export const UserIsMeWithImage: Story = {
     name: '김철수',
     comment: '안녕하세요',
     isUser: true,
+    userId: 1,
   },
 };
 
@@ -48,6 +49,7 @@ export const UserIsMeWithoutImage: Story = {
     name: '김철수',
     comment: '안녕하세요',
     isUser: true,
+    userId: 1,
   },
 };
 
@@ -57,6 +59,7 @@ export const UserIsNotMeWithImage: Story = {
     name: '김철수',
     comment: '안녕하세요',
     isUser: false,
+    userId: 1,
   },
 };
 
@@ -66,5 +69,6 @@ export const UserIsNotMeWithoutImage: Story = {
     name: '김철수',
     comment: '안녕하세요',
     isUser: false,
+    userId: 1,
   },
 };

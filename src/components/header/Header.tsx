@@ -25,7 +25,7 @@ const Header = ({ pageType, festivalName, isLogin = false }: HeaderProps) => {
   };
 
   const handleMyPage = () => {
-    router.push(ROUTES.MYPAGE);
+    router.push(ROUTES.MYPAGE('1'));
   };
 
   const renderHeader = () => {

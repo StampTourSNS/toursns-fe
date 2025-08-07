@@ -34,6 +34,7 @@ export const Profile: Story = {
     cnt: 10,
     imageUrl: 'https://picsum.photos/100/100',
     name: '김철수',
+    rank: 1,
   },
 };
 
@@ -42,5 +43,6 @@ export const NoProfile: Story = {
     cnt: 10,
     imageUrl: '',
     name: '김철수',
+    rank: 1,
   },
 };
