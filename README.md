@@ -20,6 +20,25 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Environment Variables
+
+프로젝트 루트에 `.env.local` 파일을 생성하고 다음 환경 변수를 설정하세요:
+
+```bash
+# API URL 설정
+NEXT_PUBLIC_API_URL=http://localhost:8080
+
+# 카카오 OAuth 설정 (필요시)
+NEXT_PUBLIC_KAKAO_CLIENT_ID=your_kakao_client_id
+NEXT_PUBLIC_KAKAO_REDIRECT_URI=http://localhost:3000/auth/callback
+```
+
+## 카카오 OAuth 설정
+
+1. [Kakao Developers](https://developers.kakao.com)에서 애플리케이션을 생성하세요.
+2. OAuth 설정에서 리다이렉트 URI를 `http://localhost:3000/auth/callback`로 설정하세요.
+3. 환경 변수에 클라이언트 ID를 설정하세요.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
