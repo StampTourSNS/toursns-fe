@@ -1,0 +1,37 @@
+.market_container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+}
+
+.market_header_container {
+  width: 100%;
+  font-size: 24px;
+  font-weight: 700;
+}
+.market_mydata_container {
+  width: 100%;
+  height: 100px;
+  font-size: 24px;
+  font-weight: 400;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  align-items: center;
+  background-color: #e5e7eb;
+  text-wrap: nowrap;
+}
+
+.market_content_item_container {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.market_content_item_list_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
