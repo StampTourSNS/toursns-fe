@@ -19,7 +19,7 @@ export default function MyPage() {
   const { id } = useParams();
   const [isOpen, setIsOpen] = useState(false);
 
-  // console.log(id);
+  console.log(id);
   const handleOpen = () => {
     setIsOpen(true);
   };
