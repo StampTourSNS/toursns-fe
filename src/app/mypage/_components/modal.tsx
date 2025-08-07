@@ -35,7 +35,6 @@ export default function Modal({
 
   // 닉네임 유효성 검사
   const validateNickname = (value: string) => {
-    console.log(value);
     if (value.length === 0) {
       setNicknameError('');
       return true;
@@ -96,9 +95,9 @@ export default function Modal({
       formData.append('nickname', nickname.trim());
     }
 
-    console.log('FormData:', formData);
-    console.log('닉네임:', nickname);
-    console.log('선택된 파일:', selectedFile);
+    // console.log('FormData:', formData);
+    // console.log('닉네임:', nickname);
+    // console.log('선택된 파일:', selectedFile);
 
     onClose();
   };

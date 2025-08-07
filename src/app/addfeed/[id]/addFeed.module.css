@@ -79,7 +79,11 @@
   justify-content: center;
   transition: background 0.2s;
 }
-
+.send_btn.disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
 .next_btn:hover,
 .send_btn:hover {
   background: #ff6f61;
