@@ -2,11 +2,14 @@
 
 import Image from 'next/image';
 
+import { snsLogin } from '@/api/snsLogin';
+
 import styles from './login.module.css';
 
 const Login = () => {
-  const handleKakaoLogin = () => {
-    console.log('kakao login');
+  const handleKakaoLogin = async () => {
+    const response = await snsLogin();
+    console.log(response);
   };
   return (
     <div className={styles.main_container}>
