@@ -1,6 +1,6 @@
-import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import StatusChip, { StatusType } from './StatusChip';
+
+import StatusChip from './StatusChip';
 
 const meta: Meta<typeof StatusChip> = {
   title: 'Component/StatusChip',

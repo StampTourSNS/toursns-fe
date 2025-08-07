@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 import styles from './Map.module.css';
 
@@ -179,7 +179,7 @@ export default function Map({
   const apiKey = process.env.NEXT_PUBLIC_KAKAO_MAP_API_KEY || '';
   const { isLoaded, error } = useKakaoMap(apiKey);
 
-  const initializeMap = () => {
+  const initializeMap = useCallback(() => {
     if (!mapRef.current || !isLoaded) return;
 
     try {
@@ -199,13 +199,13 @@ export default function Map({
     } catch (error) {
       console.error('지도 초기화 중 오류 발생:', error);
     }
-  };
+  }, [isLoaded, mapx, mapy, address, telNumber, name]);
 
   useEffect(() => {
     if (isLoaded) {
       setTimeout(initializeMap, 100);
     }
-  }, [isLoaded, mapx, mapy, address, telNumber, name]);
+  }, [isLoaded, initializeMap]);
 
   if (error) {
     return (

@@ -89,9 +89,9 @@ export default function CommentUser({
   return (
     <div className={styles.comment_user_container} ref={containerRef}>
       <div className={styles.comment_user_info_container}>
-        <Link href={ROUTES.MYPAGE(userId)}>{renderUserImage()}</Link>
+        <Link href={ROUTES.MYPAGE(userId.toString())}>{renderUserImage()}</Link>
         <div className={styles.comment_user_info}>
-          <Link href={ROUTES.MYPAGE(userId)}>
+          <Link href={ROUTES.MYPAGE(userId.toString())}>
             <div className={styles.comment_user_name}>
               <p>{name}</p>
             </div>
